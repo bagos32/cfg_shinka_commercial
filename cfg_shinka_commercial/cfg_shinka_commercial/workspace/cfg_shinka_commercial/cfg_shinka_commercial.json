@@ -1,6 +1,15 @@
 {
- "charts": [],
- "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Operational Snapshot</b></span>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Open Development Cases\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Active Commercial Opportunities\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Evidence Pending Verification\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Open Approval Conditions\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Active Pilots\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Pilots Awaiting Review\", \"col\": 2}}, {\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Customer Enquiry\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Evidence Record\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Commercial Development Case\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pilot\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Commercial Operating System</b></span>\", \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Understand\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Develop\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Govern\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Pilot\", \"col\": 4}}]",
+ "charts": [
+  {
+   "chart_name": "CFG Governance by Gate",
+   "label": "Governance by Gate"
+  },
+  {
+   "chart_name": "CFG Pilots by Status",
+   "label": "Pilots by Status"
+  }
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Operational Snapshot</b></span>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Open Development Cases\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Active Commercial Opportunities\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Evidence Pending Verification\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Open Approval Conditions\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Active Pilots\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"CFG Pilots Awaiting Review\", \"col\": 2}}, {\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Operational Flow</b></span>\", \"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"CFG Governance by Gate\", \"col\": 6}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"CFG Pilots by Status\", \"col\": 6}}, {\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Customer Enquiry\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Evidence Record\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Commercial Development Case\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pilot\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Commercial Operating System</b></span>\", \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Understand\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Develop\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Govern\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Pilot\", \"col\": 4}}]",
  "creation": "2026-09-02 01:26:49.593459",
  "custom_blocks": [],
  "docstatus": 0,
@@ -229,7 +238,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-09-02 01:45:47.729687",
+ "modified": "2026-09-02 01:53:33.328405",
  "modified_by": "Administrator",
  "module": "CFG Shinka Commercial",
  "name": "CFG Shinka Commercial",
