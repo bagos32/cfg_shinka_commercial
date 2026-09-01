@@ -16,7 +16,17 @@
   "business_condition",
   "desired_outcome",
   "background",
-  "business_rationale"
+  "business_rationale",
+  "company",
+  "customer",
+  "lead",
+  "territory",
+  "primary_item",
+  "item_group",
+  "target_review_date",
+  "closed_date",
+  "closure_reason",
+  "outcome_summary"
  ],
  "fields": [
   {
@@ -84,12 +94,70 @@
    "fieldname": "business_rationale",
    "fieldtype": "Small Text",
    "label": "Business Rationale"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "primary_item",
+   "fieldtype": "Link",
+   "label": "Primary Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "target_review_date",
+   "fieldtype": "Date",
+   "label": "Target Review Date"
+  },
+  {
+   "fieldname": "closed_date",
+   "fieldtype": "Date",
+   "label": "Closed Date"
+  },
+  {
+   "fieldname": "closure_reason",
+   "fieldtype": "Select",
+   "label": "Closure Reason",
+   "options": "Resolved\nOpportunity Converted\nNo Viable Opportunity\nBusiness Priority Changed\nDuplicate\nInsufficient Evidence\nOutside Scope\nOther"
+  },
+  {
+   "fieldname": "outcome_summary",
+   "fieldtype": "Small Text",
+   "label": "Outcome Summary"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-01 19:19:34.126623",
+ "modified": "2026-09-01 19:29:33.225935",
  "modified_by": "Administrator",
  "module": "Commercial Core",
  "name": "Commercial Development Case",
