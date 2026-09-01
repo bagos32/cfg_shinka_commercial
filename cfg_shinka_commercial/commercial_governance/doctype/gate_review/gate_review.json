@@ -50,7 +50,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Gate",
-   "options": "G0 \u2014 Lead Accepted\nG1 \u2014 Field / Market Validated\nG2 \u2014 Business Feasible",
+   "options": "G0 \u2014 Lead Accepted\nG1 \u2014 Field / Market Validated\nG2 \u2014 Business Feasible\nG3 \u2014 Pilot Ready\nG4 \u2014 Pilot Reviewed",
    "reqd": 1
   },
   {
@@ -111,7 +111,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-02 00:11:55.109056",
+ "modified": "2026-09-02 00:48:10.741125",
  "modified_by": "Administrator",
  "module": "Commercial Governance",
  "name": "Gate Review",

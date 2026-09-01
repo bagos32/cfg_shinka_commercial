@@ -43,6 +43,20 @@ class GateReview(Document):
                 "Hold",
                 "Reject",
             },
+            "G3 — Pilot Ready": {
+                "Approve Pilot Launch",
+                "Conditional Approval",
+                "Return for Correction",
+                "Hold",
+                "Reject",
+            },
+            "G4 — Pilot Reviewed": {
+                "Scale",
+                "Extend Pilot",
+                "Redesign",
+                "Hold",
+                "Stop",
+            },
         }
 
         if self.gate not in allowed:
