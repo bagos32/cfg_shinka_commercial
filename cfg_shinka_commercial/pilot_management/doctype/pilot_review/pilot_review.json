@@ -19,7 +19,8 @@
   "risk_result",
   "customer_channel_result",
   "key_learning",
-  "recommendation"
+  "recommendation",
+  "connections_tab"
  ],
  "fields": [
   {
@@ -101,12 +102,18 @@
    "label": "Recommendation",
    "options": "Scale\nExtend Pilot\nRedesign\nHold\nStop",
    "reqd": 1
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-02 00:46:50.038166",
+ "modified": "2026-09-02 02:08:06.692355",
  "modified_by": "Administrator",
  "module": "Pilot Management",
  "name": "Pilot Review",

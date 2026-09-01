@@ -19,8 +19,10 @@
   "commercial_assessment",
   "risk_review",
   "pilot",
+  "pilot_review",
   "due_date",
-  "next_review_date"
+  "next_review_date",
+  "connections_tab"
  ],
  "fields": [
   {
@@ -113,12 +115,24 @@
    "fieldtype": "Link",
    "label": "Pilot",
    "options": "Pilot"
+  },
+  {
+   "fieldname": "pilot_review",
+   "fieldtype": "Link",
+   "label": "Pilot Review",
+   "options": "Pilot Review"
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-02 01:08:49.176142",
+ "modified": "2026-09-02 02:10:24.875091",
  "modified_by": "Administrator",
  "module": "Commercial Governance",
  "name": "Gate Review",

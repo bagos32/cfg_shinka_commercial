@@ -10,6 +10,7 @@ class GateReview(Document):
         self.validate_gate_decision()
         self.validate_linked_records()
         self.validate_pilot_consistency()
+        self.validate_pilot_review_consistency()
 
     def on_update(self):
         self.update_pilot_current_gate()
@@ -121,6 +122,26 @@ class GateReview(Document):
         ):
             frappe.throw(
                 "Pilot must belong to the same Commercial Development Case."
+            )
+
+    def validate_pilot_review_consistency(self):
+        if self.gate != "G4 — Pilot Reviewed":
+            return
+
+        if not self.pilot_review:
+            frappe.throw(
+                "Pilot Review is required for a G4 Gate Review."
+            )
+
+        review_pilot = frappe.db.get_value(
+            "Pilot Review",
+            self.pilot_review,
+            "pilot",
+        )
+
+        if review_pilot != self.pilot:
+            frappe.throw(
+                "Pilot Review must belong to the selected Pilot."
             )
 
     def update_pilot_current_gate(self):

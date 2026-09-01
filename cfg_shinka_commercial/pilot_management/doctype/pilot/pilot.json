@@ -29,7 +29,8 @@
   "current_gate",
   "outcome",
   "success_criteria",
-  "stop_conditions"
+  "stop_conditions",
+  "connections_tab"
  ],
  "fields": [
   {
@@ -176,12 +177,18 @@
    "fieldtype": "Table",
    "label": "Stop Conditions",
    "options": "Pilot Stop Condition"
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-02 00:42:35.908524",
+ "modified": "2026-09-02 02:10:33.907459",
  "modified_by": "Administrator",
  "module": "Pilot Management",
  "name": "Pilot",

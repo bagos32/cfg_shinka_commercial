@@ -26,7 +26,8 @@
   "target_review_date",
   "closed_date",
   "closure_reason",
-  "outcome_summary"
+  "outcome_summary",
+  "connections_tab"
  ],
  "fields": [
   {
@@ -152,12 +153,18 @@
    "fieldname": "outcome_summary",
    "fieldtype": "Small Text",
    "label": "Outcome Summary"
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-01 20:39:06.790030",
+ "modified": "2026-09-02 02:10:04.728332",
  "modified_by": "Administrator",
  "module": "Commercial Core",
  "name": "Commercial Development Case",
