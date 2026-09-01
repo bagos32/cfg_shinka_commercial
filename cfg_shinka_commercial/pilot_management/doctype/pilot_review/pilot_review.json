@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PRV-.YYYY.-.#####",
+ "creation": "2026-09-02 00:46:50.038166",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "review_date",
+  "pilot",
+  "reviewer",
+  "status",
+  "results_summary",
+  "success_criteria_result",
+  "stop_conditions_triggered",
+  "commercial_result",
+  "operational_result",
+  "risk_result",
+  "customer_channel_result",
+  "key_learning",
+  "recommendation",
+  "connections_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Review Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pilot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Pilot",
+   "options": "Pilot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nCompleted\nSuperseded\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "results_summary",
+   "fieldtype": "Text Editor",
+   "label": "Results Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "success_criteria_result",
+   "fieldtype": "Text Editor",
+   "label": "Success Criteria Result"
+  },
+  {
+   "fieldname": "stop_conditions_triggered",
+   "fieldtype": "Text Editor",
+   "label": "Stop Conditions Triggered"
+  },
+  {
+   "fieldname": "commercial_result",
+   "fieldtype": "Text Editor",
+   "label": "Commercial Result"
+  },
+  {
+   "fieldname": "operational_result",
+   "fieldtype": "Text Editor",
+   "label": "Operational Result"
+  },
+  {
+   "fieldname": "risk_result",
+   "fieldtype": "Text Editor",
+   "label": "Risk Result"
+  },
+  {
+   "fieldname": "customer_channel_result",
+   "fieldtype": "Text Editor",
+   "label": "Customer / Channel Result"
+  },
+  {
+   "fieldname": "key_learning",
+   "fieldtype": "Text Editor",
+   "label": "Key Learning",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Select",
+   "label": "Recommendation",
+   "options": "Scale\nExtend Pilot\nRedesign\nHold\nStop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-02 02:08:06.692355",
+ "modified_by": "Administrator",
+ "module": "Pilot Management",
+ "name": "Pilot Review",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

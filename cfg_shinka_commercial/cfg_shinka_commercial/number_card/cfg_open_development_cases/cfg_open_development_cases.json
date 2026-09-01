@@ -1,0 +1,23 @@
+{
+ "creation": "2026-09-02 01:44:34.646444",
+ "currency": "MYR",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Commercial Development Case",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Commercial Development Case\",\"status\",\"not in\",[\"Closed\",\"Cancelled\"]]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "CFG Open Development Cases",
+ "modified": "2026-09-02 01:44:34.646444",
+ "modified_by": "Administrator",
+ "module": "CFG Shinka Commercial",
+ "name": "CFG Open Development Cases",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

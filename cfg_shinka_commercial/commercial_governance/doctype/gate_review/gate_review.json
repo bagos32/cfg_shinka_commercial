@@ -18,8 +18,11 @@
   "evidence_summary",
   "commercial_assessment",
   "risk_review",
+  "pilot",
+  "pilot_review",
   "due_date",
-  "next_review_date"
+  "next_review_date",
+  "connections_tab"
  ],
  "fields": [
   {
@@ -50,7 +53,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Gate",
-   "options": "G0 \u2014 Lead Accepted\nG1 \u2014 Field / Market Validated\nG2 \u2014 Business Feasible",
+   "options": "G0 \u2014 Lead Accepted\nG1 \u2014 Field / Market Validated\nG2 \u2014 Business Feasible\nG3 \u2014 Pilot Ready\nG4 \u2014 Pilot Reviewed",
    "reqd": 1
   },
   {
@@ -71,7 +74,7 @@
    "fieldname": "decision",
    "fieldtype": "Select",
    "label": "Decision",
-   "options": "Accept for Screening\nReturn for Missing Information\nQualify\nRequest Further Validation\nApprove for Pilot Preparation\nConditional Approval\nHold\nReject",
+   "options": "Accept for Screening\nReturn for Missing Information\nQualify\nRequest Further Validation\nApprove for Pilot Preparation\nConditional Approval\nApprove Pilot Launch\nReturn for Correction\nScale\nExtend Pilot\nRedesign\nHold\nReject\nStop",
    "reqd": 1
   },
   {
@@ -106,12 +109,30 @@
    "fieldname": "next_review_date",
    "fieldtype": "Date",
    "label": "Next Review Date"
+  },
+  {
+   "fieldname": "pilot",
+   "fieldtype": "Link",
+   "label": "Pilot",
+   "options": "Pilot"
+  },
+  {
+   "fieldname": "pilot_review",
+   "fieldtype": "Link",
+   "label": "Pilot Review",
+   "options": "Pilot Review"
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-02 00:11:55.109056",
+ "modified": "2026-09-02 02:10:24.875091",
  "modified_by": "Administrator",
  "module": "Commercial Governance",
  "name": "Gate Review",

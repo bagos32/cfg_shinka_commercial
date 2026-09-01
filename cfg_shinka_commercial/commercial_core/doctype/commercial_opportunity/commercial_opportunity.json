@@ -30,7 +30,8 @@
   "expected_decision_date",
   "erpnext_opportunity",
   "converted_to_erpnext_opportunity",
-  "conversion_date"
+  "conversion_date",
+  "connections_tab"
  ],
  "fields": [
   {
@@ -181,12 +182,18 @@
    "fieldname": "conversion_date",
    "fieldtype": "Date",
    "label": "Conversion Date"
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-01 20:39:07.582466",
+ "modified": "2026-09-02 02:10:14.999416",
  "modified_by": "Administrator",
  "module": "Commercial Core",
  "name": "Commercial Opportunity",
