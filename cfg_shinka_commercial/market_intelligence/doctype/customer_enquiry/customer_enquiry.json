@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CEQ-.YYYY.-.#####",
+ "creation": "2026-09-01 22:59:17.483508",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enquiry_date",
+  "status",
+  "enquiry_channel",
+  "customer_name_reference",
+  "customer",
+  "lead",
+  "customer_area",
+  "territory",
+  "requested_item",
+  "requested_item_group",
+  "previous_buying_outlet",
+  "availability_problem",
+  "enquiry_details",
+  "repeated_enquiry",
+  "repeat_count",
+  "alternative_outlet_provided",
+  "follow_up_required",
+  "company",
+  "business_owner",
+  "evidence_record"
+ ],
+ "fields": [
+  {
+   "fieldname": "enquiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Enquiry Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nRecorded\nReviewed\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enquiry_channel",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Enquiry Channel",
+   "options": "Phone\nWhatsApp\nEmail\nWalk-in\nSales Representative\nDistributor\nRetailer\nWebsite\nSocial Media\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name_reference",
+   "fieldtype": "Data",
+   "label": "Customer Name / Contact Reference"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "customer_area",
+   "fieldtype": "Data",
+   "label": "Customer Area"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "requested_item",
+   "fieldtype": "Link",
+   "label": "Requested Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "requested_item_group",
+   "fieldtype": "Link",
+   "label": "Requested Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "previous_buying_outlet",
+   "fieldtype": "Data",
+   "label": "Previous Buying Outlet"
+  },
+  {
+   "default": "0",
+   "fieldname": "availability_problem",
+   "fieldtype": "Check",
+   "label": "Availability Problem"
+  },
+  {
+   "fieldname": "enquiry_details",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Enquiry Details",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "repeated_enquiry",
+   "fieldtype": "Check",
+   "label": "Repeated Enquiry"
+  },
+  {
+   "fieldname": "repeat_count",
+   "fieldtype": "Int",
+   "label": "Repeat Count"
+  },
+  {
+   "default": "0",
+   "fieldname": "alternative_outlet_provided",
+   "fieldtype": "Check",
+   "label": "Alternative Outlet Provided"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_owner",
+   "fieldtype": "Link",
+   "label": "Business Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence_record",
+   "fieldtype": "Link",
+   "label": "Evidence Record",
+   "options": "Evidence Record"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-01 22:59:17.483508",
+ "modified_by": "Administrator",
+ "module": "Market Intelligence",
+ "name": "Customer Enquiry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
