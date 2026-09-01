@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RSK-.YYYY.-.#####",
+ "creation": "2026-09-02 00:07:43.381490",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "review_date",
+  "commercial_opportunity",
+  "commercial_development_case",
+  "reviewer",
+  "status",
+  "commercial_risk",
+  "credit_payment_risk",
+  "supply_risk",
+  "inventory_risk",
+  "delivery_risk",
+  "shelf_life_risk",
+  "qa_compliance_risk",
+  "channel_conflict_risk",
+  "oem_conflict_risk",
+  "contract_exclusivity_risk",
+  "data_quality_risk",
+  "operational_capacity_risk",
+  "reputation_risk",
+  "other_risk",
+  "overall_risk_level",
+  "material_risk_summary",
+  "required_mitigation",
+  "residual_risk",
+  "escalation_required",
+  "recommendation"
+ ],
+ "fields": [
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Review Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_opportunity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Opportunity",
+   "options": "Commercial Opportunity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_development_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Development Case",
+   "options": "Commercial Development Case",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Review\nCompleted\nSuperseded\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_risk",
+   "fieldtype": "Select",
+   "label": "Commercial Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "credit_payment_risk",
+   "fieldtype": "Select",
+   "label": "Credit / Payment Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "supply_risk",
+   "fieldtype": "Select",
+   "label": "Supply Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "inventory_risk",
+   "fieldtype": "Select",
+   "label": "Inventory Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "delivery_risk",
+   "fieldtype": "Select",
+   "label": "Delivery Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "shelf_life_risk",
+   "fieldtype": "Select",
+   "label": "Shelf Life Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "qa_compliance_risk",
+   "fieldtype": "Select",
+   "label": "QA / Compliance Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "channel_conflict_risk",
+   "fieldtype": "Select",
+   "label": "Channel Conflict Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "oem_conflict_risk",
+   "fieldtype": "Select",
+   "label": "OEM Conflict Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "contract_exclusivity_risk",
+   "fieldtype": "Select",
+   "label": "Contract / Exclusivity Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "data_quality_risk",
+   "fieldtype": "Select",
+   "label": "Data Quality Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "operational_capacity_risk",
+   "fieldtype": "Select",
+   "label": "Operational Capacity Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "reputation_risk",
+   "fieldtype": "Select",
+   "label": "Reputation Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "other_risk",
+   "fieldtype": "Select",
+   "label": "Other Risk",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "overall_risk_level",
+   "fieldtype": "Select",
+   "label": "Overall Risk Level",
+   "options": "Not Assessed\nLow\nMedium\nHigh\nCritical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "material_risk_summary",
+   "fieldtype": "Text Editor",
+   "label": "Material Risk Summary"
+  },
+  {
+   "fieldname": "required_mitigation",
+   "fieldtype": "Text Editor",
+   "label": "Required Mitigation"
+  },
+  {
+   "fieldname": "residual_risk",
+   "fieldtype": "Small Text",
+   "label": "Residual Risk"
+  },
+  {
+   "default": "0",
+   "fieldname": "escalation_required",
+   "fieldtype": "Check",
+   "label": "Escalation Required"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Select",
+   "label": "Recommendation",
+   "options": "Proceed\nProceed With Conditions\nFurther Review Required\nHold\nReject",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-02 00:07:43.381490",
+ "modified_by": "Administrator",
+ "module": "Commercial Governance",
+ "name": "Risk Review",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
