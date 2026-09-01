@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DSG-.YYYY.-.#####",
+ "creation": "2026-09-01 23:01:56.002360",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "signal_date",
+  "status",
+  "signal_type",
+  "company",
+  "territory",
+  "customer",
+  "lead",
+  "item",
+  "item_group",
+  "demand_description",
+  "estimated_quantity",
+  "frequency_recurrence",
+  "number_of_enquiries",
+  "stockout_frequency",
+  "historical_sales_reference",
+  "seasonal_pattern",
+  "demand_strength",
+  "evidence_basis",
+  "business_owner",
+  "evidence_record"
+ ],
+ "fields": [
+  {
+   "fieldname": "signal_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Signal Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nRecorded\nReviewed\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "signal_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Signal Type",
+   "options": "Customer Enquiry\nRepeat Enquiry\nHistorical Sales\nStock-out Pattern\nDistributor Feedback\nRetailer Feedback\nField Observation\nSeasonal Demand\nMarket Trend\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "demand_description",
+   "fieldtype": "Text Editor",
+   "label": "Demand Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimated_quantity",
+   "fieldtype": "Float",
+   "label": "Estimated Quantity"
+  },
+  {
+   "fieldname": "frequency_recurrence",
+   "fieldtype": "Data",
+   "label": "Frequency / Recurrence"
+  },
+  {
+   "fieldname": "number_of_enquiries",
+   "fieldtype": "Int",
+   "label": "Number of Enquiries"
+  },
+  {
+   "fieldname": "stockout_frequency",
+   "fieldtype": "Data",
+   "label": "Observed Stock-out Frequency"
+  },
+  {
+   "fieldname": "historical_sales_reference",
+   "fieldtype": "Data",
+   "label": "Historical Sales Reference"
+  },
+  {
+   "fieldname": "seasonal_pattern",
+   "fieldtype": "Small Text",
+   "label": "Seasonal Pattern"
+  },
+  {
+   "fieldname": "demand_strength",
+   "fieldtype": "Select",
+   "label": "Demand Strength",
+   "options": "Unconfirmed\nEmerging\nModerate\nStrong\nRepeated / Persistent"
+  },
+  {
+   "fieldname": "evidence_basis",
+   "fieldtype": "Small Text",
+   "label": "Evidence Basis"
+  },
+  {
+   "fieldname": "business_owner",
+   "fieldtype": "Link",
+   "label": "Business Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence_record",
+   "fieldtype": "Link",
+   "label": "Evidence Record",
+   "options": "Evidence Record"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-01 23:01:56.002360",
+ "modified_by": "Administrator",
+ "module": "Market Intelligence",
+ "name": "Demand Signal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

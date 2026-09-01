@@ -1,0 +1,170 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "COB-.YYYY.-.#####",
+ "creation": "2026-09-01 23:01:44.924868",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "observation_date",
+  "status",
+  "observer",
+  "company",
+  "territory",
+  "location_outlet",
+  "competitor_brand",
+  "competitor_sku_description",
+  "observed_price",
+  "promotion",
+  "availability",
+  "shelf_presence",
+  "distributor_supplier",
+  "buyer_statement",
+  "observed_replacement",
+  "market_movement",
+  "fact_statement",
+  "unverified_comment",
+  "evidence_record"
+ ],
+ "fields": [
+  {
+   "fieldname": "observation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Observation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nRecorded\nReviewed\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "observer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Observer",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "location_outlet",
+   "fieldtype": "Data",
+   "label": "Location / Outlet"
+  },
+  {
+   "fieldname": "competitor_brand",
+   "fieldtype": "Data",
+   "label": "Competitor Brand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "competitor_sku_description",
+   "fieldtype": "Data",
+   "label": "Competitor SKU / Description"
+  },
+  {
+   "fieldname": "observed_price",
+   "fieldtype": "Currency",
+   "label": "Observed Price"
+  },
+  {
+   "fieldname": "promotion",
+   "fieldtype": "Small Text",
+   "label": "Promotion"
+  },
+  {
+   "fieldname": "availability",
+   "fieldtype": "Select",
+   "label": "Availability",
+   "options": "Unknown\nAvailable\nLimited\nUnavailable\nOut of Stock"
+  },
+  {
+   "fieldname": "shelf_presence",
+   "fieldtype": "Small Text",
+   "label": "Shelf Presence / Shelf Share"
+  },
+  {
+   "fieldname": "distributor_supplier",
+   "fieldtype": "Data",
+   "label": "Distributor / Supplier"
+  },
+  {
+   "fieldname": "buyer_statement",
+   "fieldtype": "Small Text",
+   "label": "Buyer Statement"
+  },
+  {
+   "fieldname": "observed_replacement",
+   "fieldtype": "Small Text",
+   "label": "Observed Replacement"
+  },
+  {
+   "fieldname": "market_movement",
+   "fieldtype": "Small Text",
+   "label": "Market Movement"
+  },
+  {
+   "fieldname": "fact_statement",
+   "fieldtype": "Text Editor",
+   "label": "Fact Statement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unverified_comment",
+   "fieldtype": "Text Editor",
+   "label": "Unverified Comment"
+  },
+  {
+   "fieldname": "evidence_record",
+   "fieldtype": "Link",
+   "label": "Evidence Record",
+   "options": "Evidence Record"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-01 23:01:44.924868",
+ "modified_by": "Administrator",
+ "module": "Market Intelligence",
+ "name": "Competitor Observation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
