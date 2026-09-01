@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PLT-.YYYY.-.#####",
+ "creation": "2026-09-02 00:42:35.908524",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pilot_title",
+  "commercial_opportunity",
+  "commercial_development_case",
+  "status",
+  "pilot_type",
+  "pilot_owner",
+  "company",
+  "objective",
+  "pilot_hypothesis",
+  "scope_summary",
+  "start_date",
+  "planned_end_date",
+  "actual_end_date",
+  "review_due_date",
+  "territory",
+  "customer",
+  "lead",
+  "item",
+  "item_group",
+  "current_gate",
+  "outcome",
+  "success_criteria",
+  "stop_conditions"
+ ],
+ "fields": [
+  {
+   "fieldname": "pilot_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pilot Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_opportunity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Opportunity",
+   "options": "Commercial Opportunity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_development_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Development Case",
+   "options": "Commercial Development Case",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nPlanning\nReady for G3 Review\nApproved for Launch\nActive\nOn Hold\nCompleted\nStopped\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pilot_type",
+   "fieldtype": "Select",
+   "label": "Pilot Type",
+   "options": "Customer\nChannel\nTerritory\nProduct / SKU\nPricing\nDistribution\nAvailability Recovery\nCommercial Process\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pilot_owner",
+   "fieldtype": "Link",
+   "label": "Pilot Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Text Editor",
+   "label": "Objective",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pilot_hypothesis",
+   "fieldtype": "Text Editor",
+   "label": "Pilot Hypothesis",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scope_summary",
+   "fieldtype": "Text Editor",
+   "label": "Scope Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "planned_end_date",
+   "fieldtype": "Date",
+   "label": "Planned End Date"
+  },
+  {
+   "fieldname": "actual_end_date",
+   "fieldtype": "Date",
+   "label": "Actual End Date"
+  },
+  {
+   "fieldname": "review_due_date",
+   "fieldtype": "Date",
+   "label": "Review Due Date"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "current_gate",
+   "fieldtype": "Select",
+   "label": "Current Gate",
+   "options": "G2 \u2014 Business Feasible\nG3 \u2014 Pilot Ready\nG4 \u2014 Pilot Reviewed"
+  },
+  {
+   "default": "Not Reviewed",
+   "fieldname": "outcome",
+   "fieldtype": "Select",
+   "label": "Outcome",
+   "options": "Not Reviewed\nSuccessful\nPartially Successful\nInconclusive\nUnsuccessful\nStopped Early"
+  },
+  {
+   "fieldname": "success_criteria",
+   "fieldtype": "Table",
+   "label": "Success Criteria",
+   "options": "Pilot Success Criterion"
+  },
+  {
+   "fieldname": "stop_conditions",
+   "fieldtype": "Table",
+   "label": "Stop Conditions",
+   "options": "Pilot Stop Condition"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-02 00:42:35.908524",
+ "modified_by": "Administrator",
+ "module": "Pilot Management",
+ "name": "Pilot",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
