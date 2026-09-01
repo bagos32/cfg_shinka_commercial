@@ -1,6 +1,6 @@
 import frappe
 from frappe.model.document import Document
-from frappe.utils import nowdate
+from frappe.utils import getdate, nowdate
 
 
 class CorrectiveAction(Document):
@@ -21,7 +21,7 @@ class CorrectiveAction(Document):
             )
 
         if self.completion_date and self.issue_date:
-            if self.completion_date < self.issue_date:
+            if getdate(self.completion_date) < getdate(self.issue_date):
                 frappe.throw(
                     "Completion Date cannot be earlier than Issue Date."
                 )
