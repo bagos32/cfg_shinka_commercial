@@ -9,7 +9,8 @@
   "test_title",
   "test_status",
   "test_date",
-  "test_notes"
+  "test_notes",
+  "test_reference"
  ],
  "fields": [
   {
@@ -41,12 +42,17 @@
    "fieldname": "test_notes",
    "fieldtype": "Small Text",
    "label": "Test Notes"
+  },
+  {
+   "fieldname": "test_reference",
+   "fieldtype": "Data",
+   "label": "Test Reference"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-01 14:20:44.431811",
+ "modified": "2026-09-01 14:35:33.763539",
  "modified_by": "Administrator",
  "module": "Platform Administration",
  "name": "CFG Foundation Test Record",
