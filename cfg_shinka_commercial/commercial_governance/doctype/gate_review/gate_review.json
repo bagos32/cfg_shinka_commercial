@@ -18,6 +18,7 @@
   "evidence_summary",
   "commercial_assessment",
   "risk_review",
+  "pilot",
   "due_date",
   "next_review_date"
  ],
@@ -106,12 +107,18 @@
    "fieldname": "next_review_date",
    "fieldtype": "Date",
    "label": "Next Review Date"
+  },
+  {
+   "fieldname": "pilot",
+   "fieldtype": "Link",
+   "label": "Pilot",
+   "options": "Pilot"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-02 00:48:10.741125",
+ "modified": "2026-09-02 01:01:31.818243",
  "modified_by": "Administrator",
  "module": "Commercial Governance",
  "name": "Gate Review",
