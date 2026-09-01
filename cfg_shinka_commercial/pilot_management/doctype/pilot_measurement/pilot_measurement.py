@@ -1,9 +1,11 @@
-# Copyright (c) 2026, CFG Shinka and contributors
-# For license information, please see license.txt
-
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 
 class PilotMeasurement(Document):
-	pass
+    def validate(self):
+        self.validate_pilot_exists()
+
+    def validate_pilot_exists(self):
+        if self.pilot and not frappe.db.exists("Pilot", self.pilot):
+            frappe.throw("Pilot does not exist.")

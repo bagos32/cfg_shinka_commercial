@@ -1,9 +1,27 @@
-# Copyright (c) 2026, CFG Shinka and contributors
-# For license information, please see license.txt
-
-# import frappe
+import frappe
 from frappe.model.document import Document
+from frappe.utils import nowdate
 
 
 class CorrectiveAction(Document):
-	pass
+    def before_validate(self):
+        self.apply_completion_defaults()
+
+    def validate(self):
+        self.validate_completion()
+
+    def apply_completion_defaults(self):
+        if self.status == "Completed" and not self.completion_date:
+            self.completion_date = nowdate()
+
+    def validate_completion(self):
+        if self.status == "Completed" and not self.completion_evidence:
+            frappe.throw(
+                "Completion Evidence is required for a completed Corrective Action."
+            )
+
+        if self.completion_date and self.issue_date:
+            if self.completion_date < self.issue_date:
+                frappe.throw(
+                    "Completion Date cannot be earlier than Issue Date."
+                )
