@@ -1,0 +1,23 @@
+{
+ "creation": "2026-09-02 01:44:55.811934",
+ "currency": "MYR",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Evidence Record",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Evidence Record\",\"verification_status\",\"in\",[\"Not Reviewed\",\"Pending\"]]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "CFG Evidence Pending Verification",
+ "modified": "2026-09-02 01:44:55.811934",
+ "modified_by": "Administrator",
+ "module": "CFG Shinka Commercial",
+ "name": "CFG Evidence Pending Verification",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

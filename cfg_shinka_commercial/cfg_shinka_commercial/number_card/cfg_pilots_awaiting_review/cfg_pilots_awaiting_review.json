@@ -1,0 +1,23 @@
+{
+ "creation": "2026-09-02 01:45:00.216144",
+ "currency": "MYR",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Pilot",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Pilot\",\"status\",\"=\",\"Completed\"],[\"Pilot\",\"current_gate\",\"!=\",\"G4 \u2014 Pilot Reviewed\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "CFG Pilots Awaiting Review",
+ "modified": "2026-09-02 01:45:00.216144",
+ "modified_by": "Administrator",
+ "module": "CFG Shinka Commercial",
+ "name": "CFG Pilots Awaiting Review",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}
