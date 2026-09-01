@@ -1,0 +1,269 @@
+{
+ "charts": [],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Customer Enquiry\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Evidence Record\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Commercial Development Case\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pilot\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Commercial Operating System</b></span>\", \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Understand\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Develop\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Govern\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Pilot\", \"col\": 4}}]",
+ "creation": "2026-09-02 01:26:49.593459",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "chart-line",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "CFG Shinka Commercial",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Understand",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer Enquiry",
+   "link_count": 0,
+   "link_to": "Customer Enquiry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Field Observation",
+   "link_count": 0,
+   "link_to": "Field Observation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Competitor Observation",
+   "link_count": 0,
+   "link_to": "Competitor Observation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Demand Signal",
+   "link_count": 0,
+   "link_to": "Demand Signal",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Channel Observation",
+   "link_count": 0,
+   "link_to": "Channel Observation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Evidence Record",
+   "link_count": 0,
+   "link_to": "Evidence Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Develop",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Commercial Development Case",
+   "link_count": 0,
+   "link_to": "Commercial Development Case",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Commercial Opportunity",
+   "link_count": 0,
+   "link_to": "Commercial Opportunity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Govern",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Commercial Assessment",
+   "link_count": 0,
+   "link_to": "Commercial Assessment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Review",
+   "link_count": 0,
+   "link_to": "Risk Review",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gate Review",
+   "link_count": 0,
+   "link_to": "Gate Review",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Approval Condition",
+   "link_count": 0,
+   "link_to": "Approval Condition",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Decision Record",
+   "link_count": 0,
+   "link_to": "Decision Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pilot",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pilot",
+   "link_count": 0,
+   "link_to": "Pilot",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pilot Measurement",
+   "link_count": 0,
+   "link_to": "Pilot Measurement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Corrective Action",
+   "link_count": 0,
+   "link_to": "Corrective Action",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pilot Review",
+   "link_count": 0,
+   "link_to": "Pilot Review",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scale Decision",
+   "link_count": 0,
+   "link_to": "Scale Decision",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-09-02 01:26:49.593459",
+ "modified_by": "Administrator",
+ "module": "CFG Shinka Commercial",
+ "name": "CFG Shinka Commercial",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "doc_view": "New",
+   "label": "Customer Enquiry",
+   "link_to": "Customer Enquiry",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "Evidence Record",
+   "link_to": "Evidence Record",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "Commercial Development Case",
+   "link_to": "Commercial Development Case",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "Pilot",
+   "link_to": "Pilot",
+   "type": "DocType"
+  }
+ ],
+ "title": "CFG Shinka Commercial"
+}
