@@ -1,7 +1,7 @@
 [project]
 name = "cfg_shinka_commercial"
 authors = [
-    { name = "Bagos32", email = "bagos32@gmail.com"}
+    { name = "CFG Shinka", email = "bagos32@gmail.com"}
 ]
 description = "Integrated commercial operating platform for CFG Shinka Merchandise"
 requires-python = ">=3.10"
