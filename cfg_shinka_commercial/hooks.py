@@ -242,3 +242,8 @@ required_apps = ["erpnext"]
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+# CFG Commercial Core form scripts
+doctype_js = {
+    "Commercial Development Case": "public/js/commercial_development_case.js"
+}

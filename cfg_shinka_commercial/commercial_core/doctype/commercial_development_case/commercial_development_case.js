@@ -1,8 +1,2 @@
-// Copyright (c) 2026, CFG Shinka and contributors
-// For license information, please see license.txt
-
-// frappe.ui.form.on("Commercial Development Case", {
-// 	refresh(frm) {
-
-// 	},
-// });
+// Commercial Development Case form behavior is registered through hooks.py
+// and implemented in public/js/commercial_development_case.js.
