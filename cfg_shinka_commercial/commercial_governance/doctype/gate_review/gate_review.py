@@ -11,6 +11,9 @@ class GateReview(Document):
         self.validate_linked_records()
         self.validate_pilot_consistency()
 
+    def on_update(self):
+        self.update_pilot_current_gate()
+
     def apply_opportunity_defaults(self):
         if not self.commercial_opportunity:
             return
@@ -119,3 +122,22 @@ class GateReview(Document):
             frappe.throw(
                 "Pilot must belong to the same Commercial Development Case."
             )
+
+    def update_pilot_current_gate(self):
+        if (
+            not self.pilot
+            or self.status != "Completed"
+            or self.gate not in (
+                "G3 — Pilot Ready",
+                "G4 — Pilot Reviewed",
+            )
+        ):
+            return
+
+        frappe.db.set_value(
+            "Pilot",
+            self.pilot,
+            "current_gate",
+            self.gate,
+            update_modified=True,
+        )
