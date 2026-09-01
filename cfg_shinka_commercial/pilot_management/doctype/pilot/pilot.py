@@ -1,5 +1,6 @@
 import frappe
 from frappe.model.document import Document
+from frappe.utils import getdate
 
 
 class Pilot(Document):
@@ -55,28 +56,45 @@ class Pilot(Document):
             )
 
     def validate_dates(self):
+        start_date = getdate(self.start_date) if self.start_date else None
+        planned_end_date = (
+            getdate(self.planned_end_date)
+            if self.planned_end_date
+            else None
+        )
+        actual_end_date = (
+            getdate(self.actual_end_date)
+            if self.actual_end_date
+            else None
+        )
+        review_due_date = (
+            getdate(self.review_due_date)
+            if self.review_due_date
+            else None
+        )
+
         if (
-            self.start_date
-            and self.planned_end_date
-            and self.planned_end_date < self.start_date
+            start_date
+            and planned_end_date
+            and planned_end_date < start_date
         ):
             frappe.throw(
                 "Planned End Date cannot be earlier than Start Date."
             )
 
         if (
-            self.start_date
-            and self.actual_end_date
-            and self.actual_end_date < self.start_date
+            start_date
+            and actual_end_date
+            and actual_end_date < start_date
         ):
             frappe.throw(
                 "Actual End Date cannot be earlier than Start Date."
             )
 
         if (
-            self.review_due_date
-            and self.start_date
-            and self.review_due_date < self.start_date
+            start_date
+            and review_due_date
+            and review_due_date < start_date
         ):
             frappe.throw(
                 "Review Due Date cannot be earlier than Start Date."
