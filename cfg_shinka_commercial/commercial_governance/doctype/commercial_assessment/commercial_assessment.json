@@ -1,0 +1,349 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CAS-.YYYY.-.#####",
+ "creation": "2026-09-02 00:07:32.882298",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assessment_date",
+  "commercial_opportunity",
+  "commercial_development_case",
+  "status",
+  "assessment_owner",
+  "demand_assessment",
+  "demand_evidence_summary",
+  "demand_confidence",
+  "customer_channel_fit",
+  "availability_gap_assessment",
+  "channel_suitability",
+  "indicative_selling_price",
+  "indicative_cost",
+  "indicative_margin",
+  "cost_to_serve_assessment",
+  "moq_assessment",
+  "credit_payment_assessment",
+  "expected_payment_terms",
+  "financial_concern",
+  "supply_capacity_assessment",
+  "inventory_availability",
+  "delivery_feasibility",
+  "shelf_life_storage_assessment",
+  "qa_compliance_assessment",
+  "regulatory_requirement",
+  "halal_label_requirement",
+  "strategic_value",
+  "scalability_assessment",
+  "existing_channel_impact",
+  "oem_conflict_indicator",
+  "key_assumptions",
+  "missing_information",
+  "assessment_summary",
+  "recommended_next_action"
+ ],
+ "fields": [
+  {
+   "fieldname": "assessment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Assessment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_opportunity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Opportunity",
+   "options": "Commercial Opportunity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_development_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Development Case",
+   "options": "Commercial Development Case",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nCompleted\nSuperseded\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assessment_owner",
+   "fieldtype": "Link",
+   "label": "Assessment Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "demand_assessment",
+   "fieldtype": "Small Text",
+   "label": "Demand Assessment"
+  },
+  {
+   "fieldname": "demand_evidence_summary",
+   "fieldtype": "Text Editor",
+   "label": "Demand Evidence Summary"
+  },
+  {
+   "fieldname": "demand_confidence",
+   "fieldtype": "Select",
+   "label": "Demand Confidence",
+   "options": "Unknown\nLow\nModerate\nHigh"
+  },
+  {
+   "fieldname": "customer_channel_fit",
+   "fieldtype": "Small Text",
+   "label": "Customer / Channel Fit"
+  },
+  {
+   "fieldname": "availability_gap_assessment",
+   "fieldtype": "Small Text",
+   "label": "Availability Gap Assessment"
+  },
+  {
+   "fieldname": "channel_suitability",
+   "fieldtype": "Small Text",
+   "label": "Channel Suitability"
+  },
+  {
+   "fieldname": "indicative_selling_price",
+   "fieldtype": "Currency",
+   "label": "Indicative Selling Price"
+  },
+  {
+   "fieldname": "indicative_cost",
+   "fieldtype": "Currency",
+   "label": "Indicative Cost"
+  },
+  {
+   "fieldname": "indicative_margin",
+   "fieldtype": "Percent",
+   "label": "Indicative Margin"
+  },
+  {
+   "fieldname": "cost_to_serve_assessment",
+   "fieldtype": "Small Text",
+   "label": "Cost to Serve Assessment"
+  },
+  {
+   "fieldname": "moq_assessment",
+   "fieldtype": "Small Text",
+   "label": "MOQ Assessment"
+  },
+  {
+   "fieldname": "credit_payment_assessment",
+   "fieldtype": "Small Text",
+   "label": "Credit / Payment Assessment"
+  },
+  {
+   "fieldname": "expected_payment_terms",
+   "fieldtype": "Data",
+   "label": "Expected Payment Terms"
+  },
+  {
+   "fieldname": "financial_concern",
+   "fieldtype": "Small Text",
+   "label": "Financial Concern"
+  },
+  {
+   "fieldname": "supply_capacity_assessment",
+   "fieldtype": "Small Text",
+   "label": "Supply Capacity Assessment"
+  },
+  {
+   "fieldname": "inventory_availability",
+   "fieldtype": "Small Text",
+   "label": "Inventory Availability"
+  },
+  {
+   "fieldname": "delivery_feasibility",
+   "fieldtype": "Small Text",
+   "label": "Delivery Feasibility"
+  },
+  {
+   "fieldname": "shelf_life_storage_assessment",
+   "fieldtype": "Small Text",
+   "label": "Shelf Life / Storage Assessment"
+  },
+  {
+   "fieldname": "qa_compliance_assessment",
+   "fieldtype": "Small Text",
+   "label": "QA / Compliance Assessment"
+  },
+  {
+   "fieldname": "regulatory_requirement",
+   "fieldtype": "Small Text",
+   "label": "Regulatory Requirement"
+  },
+  {
+   "fieldname": "halal_label_requirement",
+   "fieldtype": "Small Text",
+   "label": "Halal / Label Requirement"
+  },
+  {
+   "fieldname": "strategic_value",
+   "fieldtype": "Small Text",
+   "label": "Strategic Value"
+  },
+  {
+   "fieldname": "scalability_assessment",
+   "fieldtype": "Small Text",
+   "label": "Scalability Assessment"
+  },
+  {
+   "fieldname": "existing_channel_impact",
+   "fieldtype": "Small Text",
+   "label": "Existing Channel Impact"
+  },
+  {
+   "default": "0",
+   "fieldname": "oem_conflict_indicator",
+   "fieldtype": "Check",
+   "label": "OEM Conflict Indicator"
+  },
+  {
+   "fieldname": "key_assumptions",
+   "fieldtype": "Text Editor",
+   "label": "Key Assumptions"
+  },
+  {
+   "fieldname": "missing_information",
+   "fieldtype": "Text Editor",
+   "label": "Missing Information"
+  },
+  {
+   "fieldname": "assessment_summary",
+   "fieldtype": "Text Editor",
+   "label": "Assessment Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recommended_next_action",
+   "fieldtype": "Select",
+   "label": "Recommended Next Action",
+   "options": "Proceed\nMore Validation Required\nHold\nReject\nProceed to Risk Review",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-02 00:11:53.669392",
+ "modified_by": "Administrator",
+ "module": "Commercial Governance",
+ "name": "Commercial Assessment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Governance User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Governance Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Commercial Approver",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Finance Reviewer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Operations Reviewer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG QA Reviewer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Management Viewer",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Platform Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
