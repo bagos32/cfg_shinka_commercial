@@ -1,0 +1,256 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "COP-.YYYY.-.#####",
+ "creation": "2026-09-01 19:42:52.935603",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "opportunity_title",
+  "commercial_development_case",
+  "status",
+  "opportunity_type",
+  "priority",
+  "business_owner",
+  "identified_date",
+  "opportunity_description",
+  "proposed_commercial_response",
+  "expected_business_benefit",
+  "key_assumptions",
+  "company",
+  "customer",
+  "lead",
+  "territory",
+  "item",
+  "item_group",
+  "sales_person",
+  "estimated_value",
+  "currency",
+  "expected_decision_date",
+  "erpnext_opportunity",
+  "converted_to_erpnext_opportunity",
+  "conversion_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "opportunity_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Opportunity Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_development_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Development Case",
+   "options": "Commercial Development Case",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIdentified\nUnder Assessment\nQualified\nOn Hold\nRejected\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "opportunity_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Opportunity Type",
+   "options": "New Customer\nExisting Customer Growth\nNew Channel\nChannel Recovery\nNew Territory\nNew Product / SKU\nCustomer Retention\nDistribution\nStrategic Partnership\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_owner",
+   "fieldtype": "Link",
+   "label": "Business Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "identified_date",
+   "fieldtype": "Date",
+   "label": "Identified Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "opportunity_description",
+   "fieldtype": "Small Text",
+   "label": "Opportunity Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "proposed_commercial_response",
+   "fieldtype": "Text Editor",
+   "label": "Proposed Commercial Response",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_business_benefit",
+   "fieldtype": "Small Text",
+   "label": "Expected Business Benefit"
+  },
+  {
+   "fieldname": "key_assumptions",
+   "fieldtype": "Small Text",
+   "label": "Key Assumptions"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "label": "Sales Person",
+   "options": "Sales Person"
+  },
+  {
+   "fieldname": "estimated_value",
+   "fieldtype": "Currency",
+   "label": "Estimated Value"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "expected_decision_date",
+   "fieldtype": "Date",
+   "label": "Expected Decision Date"
+  },
+  {
+   "fieldname": "erpnext_opportunity",
+   "fieldtype": "Link",
+   "label": "ERPNext Opportunity",
+   "options": "Opportunity"
+  },
+  {
+   "default": "0",
+   "fieldname": "converted_to_erpnext_opportunity",
+   "fieldtype": "Check",
+   "label": "Converted to ERPNext Opportunity"
+  },
+  {
+   "fieldname": "conversion_date",
+   "fieldtype": "Date",
+   "label": "Conversion Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-01 20:39:07.582466",
+ "modified_by": "Administrator",
+ "module": "Commercial Core",
+ "name": "Commercial Opportunity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Commercial User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Commercial Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Commercial Viewer",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Platform Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
