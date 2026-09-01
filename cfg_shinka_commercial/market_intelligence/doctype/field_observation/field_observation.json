@@ -1,0 +1,212 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "FOB-.YYYY.-.#####",
+ "creation": "2026-09-01 22:59:34.212869",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "observation_date",
+  "status",
+  "observer",
+  "company",
+  "territory",
+  "location_outlet",
+  "customer",
+  "observation_type",
+  "item",
+  "item_group",
+  "observed_condition",
+  "availability_status",
+  "stockout_observed",
+  "approximate_shelf_situation",
+  "buyer_staff_statement",
+  "route_logistics_fact",
+  "evidence_record",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "observation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Observation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nRecorded\nReviewed\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "observer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Observer",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "location_outlet",
+   "fieldtype": "Data",
+   "label": "Location / Outlet"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "observation_type",
+   "fieldtype": "Select",
+   "label": "Observation Type",
+   "options": "Availability\nStock-out\nShelf Presence\nCustomer Behaviour\nChannel Condition\nRoute / Logistics\nCompetitor Presence\nPrice Observation\nPromotion Observation\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "observed_condition",
+   "fieldtype": "Text Editor",
+   "label": "Observed Condition",
+   "reqd": 1
+  },
+  {
+   "fieldname": "availability_status",
+   "fieldtype": "Select",
+   "label": "Availability Status",
+   "options": "Unknown\nAvailable\nLimited\nUnavailable\nOut of Stock"
+  },
+  {
+   "default": "0",
+   "fieldname": "stockout_observed",
+   "fieldtype": "Check",
+   "label": "Stock-out Observed"
+  },
+  {
+   "fieldname": "approximate_shelf_situation",
+   "fieldtype": "Small Text",
+   "label": "Approximate Shelf Situation"
+  },
+  {
+   "fieldname": "buyer_staff_statement",
+   "fieldtype": "Small Text",
+   "label": "Buyer / Staff Statement"
+  },
+  {
+   "fieldname": "route_logistics_fact",
+   "fieldtype": "Small Text",
+   "label": "Route / Logistics Fact"
+  },
+  {
+   "fieldname": "evidence_record",
+   "fieldtype": "Link",
+   "label": "Evidence Record",
+   "options": "Evidence Record"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-01 23:05:01.769608",
+ "modified_by": "Administrator",
+ "module": "Market Intelligence",
+ "name": "Field Observation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Market Intelligence User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Market Intelligence Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Market Intelligence Viewer",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Platform Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

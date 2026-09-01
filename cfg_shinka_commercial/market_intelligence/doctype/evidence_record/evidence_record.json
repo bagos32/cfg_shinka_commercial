@@ -1,0 +1,275 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EVD-.YYYY.-.#####",
+ "creation": "2026-09-01 22:57:06.065479",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "evidence_title",
+  "evidence_type",
+  "status",
+  "evidence_date",
+  "business_owner",
+  "evidence_summary",
+  "observed_fact",
+  "interpretation",
+  "source_description",
+  "source_type",
+  "source_doctype",
+  "source_document",
+  "external_reference",
+  "source_person_organization",
+  "company",
+  "customer",
+  "lead",
+  "territory",
+  "item",
+  "item_group",
+  "evidence_strength",
+  "source_reliability",
+  "verification_status",
+  "verified_by",
+  "verified_date",
+  "related_cases",
+  "additional_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "evidence_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Evidence Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Evidence Type",
+   "options": "Customer Request\nBuyer Confirmation\nField Observation\nCompetitor Observation\nDemand Signal\nChannel Observation\nHistorical Sales\nStock-out History\nDistributor Feedback\nMarket Survey\nRoute / Logistics Fact\nInternal Data\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nRecorded\nUnder Verification\nVerified\nDisputed\nSuperseded\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Evidence Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_owner",
+   "fieldtype": "Link",
+   "label": "Business Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence_summary",
+   "fieldtype": "Small Text",
+   "label": "Evidence Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "observed_fact",
+   "fieldtype": "Text Editor",
+   "label": "Observed Fact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "interpretation",
+   "fieldtype": "Text Editor",
+   "label": "Interpretation / Implication"
+  },
+  {
+   "fieldname": "source_description",
+   "fieldtype": "Small Text",
+   "label": "Source Description"
+  },
+  {
+   "fieldname": "source_type",
+   "fieldtype": "Select",
+   "label": "Source Type",
+   "options": "Customer\nField\nCompetitor\nDistributor\nRetailer\nInternal System\nExternal Source\nOther"
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Link",
+   "label": "Source DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "source_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Source Document",
+   "options": "source_doctype"
+  },
+  {
+   "fieldname": "external_reference",
+   "fieldtype": "Data",
+   "label": "External Reference"
+  },
+  {
+   "fieldname": "source_person_organization",
+   "fieldtype": "Data",
+   "label": "Source Person / Organization"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "evidence_strength",
+   "fieldtype": "Select",
+   "label": "Evidence Strength",
+   "options": "Weak\nModerate\nStrong"
+  },
+  {
+   "fieldname": "source_reliability",
+   "fieldtype": "Select",
+   "label": "Source Reliability",
+   "options": "Unknown\nLow\nMedium\nHigh"
+  },
+  {
+   "default": "Not Reviewed",
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "Not Reviewed\nPending\nVerified\nDisputed"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "verified_date",
+   "fieldtype": "Date",
+   "label": "Verified Date"
+  },
+  {
+   "fieldname": "related_cases",
+   "fieldtype": "Table",
+   "label": "Related Cases",
+   "options": "Evidence Case Link"
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Text Editor",
+   "label": "Additional Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-01 23:05:00.422979",
+ "modified_by": "Administrator",
+ "module": "Market Intelligence",
+ "name": "Evidence Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Market Intelligence User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Market Intelligence Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Market Intelligence Viewer",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Platform Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

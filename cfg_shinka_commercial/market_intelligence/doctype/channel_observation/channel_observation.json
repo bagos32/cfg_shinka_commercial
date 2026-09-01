@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CHN-.YYYY.-.#####",
+ "creation": "2026-09-01 23:02:06.820297",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "observation_date",
+  "status",
+  "observer",
+  "company",
+  "territory",
+  "channel_type",
+  "outlet_organization",
+  "customer",
+  "distributor_supplier",
+  "item",
+  "availability_status",
+  "current_cfg_presence",
+  "competitor_presence",
+  "route_coverage",
+  "service_frequency",
+  "replenishment_condition",
+  "channel_issue",
+  "potential_alternative_channel",
+  "observation_summary",
+  "evidence_record"
+ ],
+ "fields": [
+  {
+   "fieldname": "observation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Observation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nRecorded\nReviewed\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "observer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Observer",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "channel_type",
+   "fieldtype": "Select",
+   "label": "Channel Type",
+   "options": "Distributor\nWholesaler\nRetailer\nModern Trade\nInstitutional\nDirect\nE-commerce\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "outlet_organization",
+   "fieldtype": "Data",
+   "label": "Outlet / Organization"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "distributor_supplier",
+   "fieldtype": "Data",
+   "label": "Distributor / Supplier"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "availability_status",
+   "fieldtype": "Select",
+   "label": "Availability Status",
+   "options": "Unknown\nAvailable\nLimited\nUnavailable\nOut of Stock"
+  },
+  {
+   "fieldname": "current_cfg_presence",
+   "fieldtype": "Small Text",
+   "label": "Current CFG Presence"
+  },
+  {
+   "fieldname": "competitor_presence",
+   "fieldtype": "Small Text",
+   "label": "Competitor Presence"
+  },
+  {
+   "fieldname": "route_coverage",
+   "fieldtype": "Small Text",
+   "label": "Route Coverage"
+  },
+  {
+   "fieldname": "service_frequency",
+   "fieldtype": "Data",
+   "label": "Service Frequency"
+  },
+  {
+   "fieldname": "replenishment_condition",
+   "fieldtype": "Small Text",
+   "label": "Replenishment Condition"
+  },
+  {
+   "fieldname": "channel_issue",
+   "fieldtype": "Text Editor",
+   "label": "Channel Issue"
+  },
+  {
+   "fieldname": "potential_alternative_channel",
+   "fieldtype": "Small Text",
+   "label": "Potential Alternative Channel"
+  },
+  {
+   "fieldname": "observation_summary",
+   "fieldtype": "Text Editor",
+   "label": "Observation Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence_record",
+   "fieldtype": "Link",
+   "label": "Evidence Record",
+   "options": "Evidence Record"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-01 23:05:03.025980",
+ "modified_by": "Administrator",
+ "module": "Market Intelligence",
+ "name": "Channel Observation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Market Intelligence User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Market Intelligence Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Market Intelligence Viewer",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CFG Platform Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
