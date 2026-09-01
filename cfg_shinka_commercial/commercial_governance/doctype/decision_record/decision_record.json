@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DEC-.YYYY.-.#####",
+ "creation": "2026-09-02 00:09:47.981685",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "decision_date",
+  "commercial_opportunity",
+  "commercial_development_case",
+  "gate_review",
+  "decision_type",
+  "decision",
+  "decision_rationale",
+  "decision_maker",
+  "effective_date",
+  "conditions_summary",
+  "supersedes_decision",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Decision Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_opportunity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Opportunity",
+   "options": "Commercial Opportunity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_development_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Development Case",
+   "options": "Commercial Development Case",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gate_review",
+   "fieldtype": "Link",
+   "label": "Gate Review",
+   "options": "Gate Review"
+  },
+  {
+   "fieldname": "decision_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Decision Type",
+   "options": "Gate Decision\nManagement Decision\nCommercial Decision\nRisk Decision\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "Select",
+   "label": "Decision",
+   "options": "Proceed\nHold\nReject\nReturn for Correction\nApprove for Pilot Preparation\nClose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "decision_rationale",
+   "fieldtype": "Text Editor",
+   "label": "Decision Rationale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "decision_maker",
+   "fieldtype": "Link",
+   "label": "Decision Maker",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "conditions_summary",
+   "fieldtype": "Text Editor",
+   "label": "Conditions Summary"
+  },
+  {
+   "fieldname": "supersedes_decision",
+   "fieldtype": "Link",
+   "label": "Supersedes Decision",
+   "options": "Decision Record"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nSuperseded\nWithdrawn",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-02 00:09:47.981685",
+ "modified_by": "Administrator",
+ "module": "Commercial Governance",
+ "name": "Decision Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

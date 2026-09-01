@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "GTR-.YYYY.-.#####",
+ "creation": "2026-09-02 00:09:27.698140",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "review_date",
+  "commercial_opportunity",
+  "commercial_development_case",
+  "gate",
+  "reviewer",
+  "status",
+  "decision",
+  "decision_summary",
+  "evidence_summary",
+  "commercial_assessment",
+  "risk_review",
+  "due_date",
+  "next_review_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Review Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_opportunity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Opportunity",
+   "options": "Commercial Opportunity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial_development_case",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commercial Development Case",
+   "options": "Commercial Development Case",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gate",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gate",
+   "options": "G0 \u2014 Lead Accepted\nG1 \u2014 Field / Market Validated\nG2 \u2014 Business Feasible",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "label": "Reviewer",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Review\nCompleted\nSuperseded\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "Select",
+   "label": "Decision",
+   "options": "Accept for Screening\nReturn for Missing Information\nQualify\nRequest Further Validation\nApprove for Pilot Preparation\nConditional Approval\nHold\nReject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "decision_summary",
+   "fieldtype": "Text Editor",
+   "label": "Decision Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence_summary",
+   "fieldtype": "Text Editor",
+   "label": "Evidence Summary"
+  },
+  {
+   "fieldname": "commercial_assessment",
+   "fieldtype": "Link",
+   "label": "Commercial Assessment",
+   "options": "Commercial Assessment"
+  },
+  {
+   "fieldname": "risk_review",
+   "fieldtype": "Link",
+   "label": "Risk Review",
+   "options": "Risk Review"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-02 00:09:27.698140",
+ "modified_by": "Administrator",
+ "module": "Commercial Governance",
+ "name": "Gate Review",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
