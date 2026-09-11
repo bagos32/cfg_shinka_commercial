@@ -52,7 +52,9 @@ class CustomerRedirection(Document):
         if self.market_vacuum and access_point.market_vacuum != self.market_vacuum:
             frappe.throw("Access Point must relate to the selected Market Vacuum.")
 
-        for fieldname in ("company", "territory", "item"):
+        # Customer territory describes the demand location; the recommended
+        # outlet may legitimately sit across a nearby territory boundary.
+        for fieldname in ("company", "item"):
             value = self.get(fieldname)
             access_value = access_point.get(fieldname)
             if value and access_value and value != access_value:
@@ -60,7 +62,7 @@ class CustomerRedirection(Document):
 
         if self.market_vacuum:
             vacuum = frappe.get_doc("Market Vacuum", self.market_vacuum)
-            for fieldname in ("company", "territory", "item"):
+            for fieldname in ("company", "item"):
                 value = self.get(fieldname)
                 vacuum_value = vacuum.get(fieldname)
                 if value and vacuum_value and value != vacuum_value:
