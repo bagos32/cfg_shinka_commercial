@@ -22,14 +22,18 @@ class FieldObservation(Document):
     def _apply_place(self):
         if self.cfg_place:
             place = frappe.get_doc("CFG Place", self.cfg_place)
-            self.territory = self.territory or place.territory
+            self.territory = place.territory
             self.location = self.location or place.location
             self.location_outlet = self.location_outlet or place.place_name
             self.customer = self.customer or place.customer
-            if self.territory == place.territory:
-                self.territory_geography = place.territory_geography
-                if place.territory_geography:
-                    return frappe.get_doc(
-                        "CFG Territory Geography", place.territory_geography
-                    )
+            self.territory_geography = place.territory_geography
+            if place.territory_geography:
+                geography = frappe.get_doc(
+                    "CFG Territory Geography", place.territory_geography
+                )
+                if geography.territory != place.territory:
+                    frappe.throw("The selected CFG Place references a boundary for another Territory.")
+                if geography.status != "Active":
+                    frappe.throw("The selected CFG Place does not reference an Active territory boundary.")
+                return geography
         return None

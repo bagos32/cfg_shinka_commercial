@@ -65,6 +65,8 @@ def run():
                 "Field Observation inherited the location but boundary validation returned "
                 f"{observation.boundary_validation_status}."
             )
+        if observation.territory != place.territory:
+            frappe.throw("A governed CFG Place did not enforce its authoritative Territory.")
         report["checks"].append("Field Observation reuses and validates governed place geometry")
 
         outside = _insert(report, {

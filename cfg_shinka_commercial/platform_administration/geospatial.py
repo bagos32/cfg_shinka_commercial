@@ -74,13 +74,7 @@ def apply_boundary_validation(
         return "Not Checked"
 
     point = extract_single_point(location, document.meta.get_label(location_field))
-    geography = None
-    if (
-        preferred_geography
-        and preferred_geography.territory == territory
-        and preferred_geography.status == "Active"
-    ):
-        geography = preferred_geography
+    geography = preferred_geography
     if not geography:
         geography = active_territory_geography(territory)
     if not geography and document.get("territory_geography"):
