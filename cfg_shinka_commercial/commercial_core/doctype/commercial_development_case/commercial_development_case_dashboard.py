@@ -9,6 +9,8 @@ def get_data():
                 "label": _("Commercial Development"),
                 "items": [
                     "Commercial Opportunity",
+                    "Market Vacuum",
+                    "Channel Resilience Assessment",
                 ],
             },
             {

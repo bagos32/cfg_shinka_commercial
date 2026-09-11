@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"6VkQP2BdZE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Snapshot</b></span>\",\"col\":12}},{\"id\":\"ohlDrAYhUB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Flow</b></span>\",\"col\":12}},{\"id\":\"kDgdcKMA_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"b2Q4fEo9lS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Enquiry\",\"col\":3}},{\"id\":\"Gl1JBty1xK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Evidence Record\",\"col\":3}},{\"id\":\"e6HpPVvxYA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commercial Development Case\",\"col\":3}},{\"id\":\"4r5yooCahT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot\",\"col\":3}},{\"id\":\"m2NS_rxKuk\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BeStGtMQqm\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Commercial Operating System</b></span>\",\"col\":12}},{\"id\":\"H11WVzS5yX\",\"type\":\"card\",\"data\":{\"card_name\":\"Understand\",\"col\":4}},{\"id\":\"_iy1hio_3p\",\"type\":\"card\",\"data\":{\"card_name\":\"Develop\",\"col\":4}},{\"id\":\"SR60DXqzWk\",\"type\":\"card\",\"data\":{\"card_name\":\"Govern\",\"col\":4}},{\"id\":\"OHEaEYf2O3\",\"type\":\"card\",\"data\":{\"card_name\":\"Pilot\",\"col\":4}},{\"id\":\"86wN1zQz9I\",\"type\":\"card\",\"data\":{\"card_name\":\"User Guide & Learning\",\"col\":4}}]",
+ "content": "[{\"id\":\"6VkQP2BdZE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Snapshot</b></span>\",\"col\":12}},{\"id\":\"ohlDrAYhUB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Flow</b></span>\",\"col\":12}},{\"id\":\"kDgdcKMA_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"b2Q4fEo9lS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Enquiry\",\"col\":3}},{\"id\":\"Gl1JBty1xK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Evidence Record\",\"col\":3}},{\"id\":\"e6HpPVvxYA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commercial Development Case\",\"col\":3}},{\"id\":\"4r5yooCahT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot\",\"col\":3}},{\"id\":\"m2NS_rxKuk\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BeStGtMQqm\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Commercial Operating System</b></span>\",\"col\":12}},{\"id\":\"H11WVzS5yX\",\"type\":\"card\",\"data\":{\"card_name\":\"Understand\",\"col\":4}},{\"id\":\"_iy1hio_3p\",\"type\":\"card\",\"data\":{\"card_name\":\"Develop\",\"col\":4}},{\"id\":\"mvPhase2\",\"type\":\"card\",\"data\":{\"card_name\":\"Protect Customer Access\",\"col\":4}},{\"id\":\"SR60DXqzWk\",\"type\":\"card\",\"data\":{\"card_name\":\"Govern\",\"col\":4}},{\"id\":\"OHEaEYf2O3\",\"type\":\"card\",\"data\":{\"card_name\":\"Pilot\",\"col\":4}},{\"id\":\"86wN1zQz9I\",\"type\":\"card\",\"data\":{\"card_name\":\"User Guide & Learning\",\"col\":4}}]",
  "creation": "2026-09-02 01:26:49.593459",
  "custom_blocks": [],
  "docstatus": 0,
@@ -106,6 +106,55 @@
    "label": "Commercial Opportunity",
    "link_count": 0,
    "link_to": "Commercial Opportunity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Protect Customer Access",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Market Vacuum",
+   "link_count": 0,
+   "link_to": "Market Vacuum",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Access Point",
+   "link_count": 0,
+   "link_to": "Access Point",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer Redirection",
+   "link_count": 0,
+   "link_to": "Customer Redirection",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Channel Resilience Assessment",
+   "link_count": 0,
+   "link_to": "Channel Resilience Assessment",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -330,6 +379,12 @@
    "doc_view": "New",
    "label": "Commercial Development Case",
    "link_to": "Commercial Development Case",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "Market Vacuum",
+   "link_to": "Market Vacuum",
    "type": "DocType"
   },
   {

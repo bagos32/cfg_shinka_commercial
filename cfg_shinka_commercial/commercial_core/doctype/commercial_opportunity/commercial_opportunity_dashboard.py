@@ -6,6 +6,13 @@ def get_data():
         "fieldname": "commercial_opportunity",
         "transactions": [
             {
+                "label": _("Customer Access"),
+                "items": [
+                    "Market Vacuum",
+                    "Access Point",
+                ],
+            },
+            {
                 "label": _("Governance"),
                 "items": [
                     "Commercial Assessment",

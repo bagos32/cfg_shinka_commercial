@@ -1,0 +1,36 @@
+{
+ "actions":[],"allow_rename":1,"autoname":"CRD-.YYYY.-.#####","doctype":"DocType","engine":"InnoDB",
+ "field_order":["request_date","redirection_date","response_days","status","customer_enquiry","market_vacuum","access_point","company","territory","customer_area","item","customer","lead","redirection_channel","alternative_options_provided","message_summary","follow_up_required","follow_up_date","outcome","purchase_confirmed","outcome_evidence","handled_by"],
+ "fields":[
+  {"fieldname":"request_date","fieldtype":"Date","label":"Request Date","reqd":1,"in_list_view":1},
+  {"fieldname":"redirection_date","fieldtype":"Date","label":"Redirection Date","reqd":1},
+  {"fieldname":"response_days","fieldtype":"Int","label":"Response Time (Days)","read_only":1},
+  {"fieldname":"status","fieldtype":"Select","label":"Status","options":"Open\nInformation Provided\nFollow-up Required\nClosed","reqd":1,"in_list_view":1},
+  {"fieldname":"customer_enquiry","fieldtype":"Link","label":"Customer Enquiry","options":"Customer Enquiry","reqd":1,"in_list_view":1},
+  {"fieldname":"market_vacuum","fieldtype":"Link","label":"Market Vacuum","options":"Market Vacuum"},
+  {"fieldname":"access_point","fieldtype":"Link","label":"Recommended Access Point","options":"Access Point","reqd":1,"in_list_view":1},
+  {"fieldname":"company","fieldtype":"Link","label":"Company","options":"Company","reqd":1},
+  {"fieldname":"territory","fieldtype":"Link","label":"Territory","options":"Territory"},
+  {"fieldname":"customer_area","fieldtype":"Data","label":"Customer Area"},
+  {"fieldname":"item","fieldtype":"Link","label":"Requested Item","options":"Item"},
+  {"fieldname":"customer","fieldtype":"Link","label":"Customer","options":"Customer"},
+  {"fieldname":"lead","fieldtype":"Link","label":"Lead","options":"Lead"},
+  {"fieldname":"redirection_channel","fieldtype":"Select","label":"Redirection Channel","options":"Phone\nWhatsApp\nEmail\nWebsite\nSocial Media\nSales Representative\nDistributor\nRetailer\nOther","reqd":1},
+  {"fieldname":"alternative_options_provided","fieldtype":"Int","label":"Alternative Options Provided","default":"1","non_negative":1},
+  {"fieldname":"message_summary","fieldtype":"Small Text","label":"Information Provided","reqd":1},
+  {"default":"0","fieldname":"follow_up_required","fieldtype":"Check","label":"Follow-up Required"},
+  {"fieldname":"follow_up_date","fieldtype":"Date","label":"Follow-up Date"},
+  {"default":"Pending","fieldname":"outcome","fieldtype":"Select","label":"Outcome","options":"Pending\nCustomer Reached\nOutlet Visited\nPurchase Confirmed\nProduct Unavailable\nCustomer Declined\nUnable to Verify","reqd":1},
+  {"default":"0","fieldname":"purchase_confirmed","fieldtype":"Check","label":"Purchase Confirmed"},
+  {"fieldname":"outcome_evidence","fieldtype":"Small Text","label":"Outcome Evidence"},
+  {"fieldname":"handled_by","fieldtype":"Link","label":"Handled By","options":"User","reqd":1}
+ ],
+ "module":"Customer Access","name":"Customer Redirection",
+ "permissions":[
+  {"role":"CFG Market Intelligence User","read":1,"write":1,"create":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"CFG Market Intelligence Manager","read":1,"write":1,"create":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"CFG Market Intelligence Viewer","read":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"CFG Platform Administrator","read":1,"write":1,"create":1,"delete":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"email":1,"export":1,"print":1,"report":1,"share":1}
+ ],"sort_field":"modified","sort_order":"DESC","states":[],"track_changes":1
+}

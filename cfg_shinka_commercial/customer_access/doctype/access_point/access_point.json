@@ -1,0 +1,40 @@
+{
+ "actions":[],"allow_rename":1,"autoname":"CAP-.YYYY.-.#####","doctype":"DocType","engine":"InnoDB",
+ "field_order":["access_point_name","status","access_type","customer","lead","company","territory","customer_area","address_reference","latitude","longitude","service_radius_km","availability_status","item","item_group","activation_date","last_verified_date","market_vacuum","commercial_opportunity","pilot","independence_group","channel_owner_reference","route_reference","approved_for_redirection","public_contact_information","verification_notes"],
+ "fields":[
+  {"fieldname":"access_point_name","fieldtype":"Data","label":"Access Point Name","reqd":1,"in_list_view":1},
+  {"fieldname":"status","fieldtype":"Select","label":"Status","options":"Candidate\nUnder Qualification\nApproved\nActive\nTemporarily Unavailable\nInactive\nRejected","reqd":1,"in_list_view":1},
+  {"fieldname":"access_type","fieldtype":"Select","label":"Access Type","options":"Hypermarket\nSupermarket\nWholesaler\nIndependent Retailer\nDistributor\nDealer\nDirect Sales\nInstitutional\nDigital\nOther","reqd":1,"in_list_view":1},
+  {"fieldname":"customer","fieldtype":"Link","label":"Customer","options":"Customer"},
+  {"fieldname":"lead","fieldtype":"Link","label":"Lead","options":"Lead"},
+  {"fieldname":"company","fieldtype":"Link","label":"Company","options":"Company","reqd":1},
+  {"fieldname":"territory","fieldtype":"Link","label":"Territory","options":"Territory"},
+  {"fieldname":"customer_area","fieldtype":"Data","label":"Customer Area"},
+  {"fieldname":"address_reference","fieldtype":"Link","label":"Address","options":"Address"},
+  {"fieldname":"latitude","fieldtype":"Float","label":"Latitude","precision":"6"},
+  {"fieldname":"longitude","fieldtype":"Float","label":"Longitude","precision":"6"},
+  {"fieldname":"service_radius_km","fieldtype":"Float","label":"Practical Service Radius (km)","non_negative":1},
+  {"fieldname":"availability_status","fieldtype":"Select","label":"Availability Status","options":"Unknown\nAvailable\nLimited\nStock-Out\nDelisted\nNot Yet Stocked","reqd":1,"in_list_view":1},
+  {"fieldname":"item","fieldtype":"Link","label":"Item","options":"Item"},
+  {"fieldname":"item_group","fieldtype":"Link","label":"Item Group","options":"Item Group"},
+  {"fieldname":"activation_date","fieldtype":"Date","label":"Activation Date"},
+  {"fieldname":"last_verified_date","fieldtype":"Date","label":"Last Verified Date"},
+  {"fieldname":"market_vacuum","fieldtype":"Link","label":"Market Vacuum","options":"Market Vacuum"},
+  {"fieldname":"commercial_opportunity","fieldtype":"Link","label":"Commercial Opportunity","options":"Commercial Opportunity"},
+  {"fieldname":"pilot","fieldtype":"Link","label":"Pilot","options":"Pilot"},
+  {"fieldname":"independence_group","fieldtype":"Data","label":"Independence Group"},
+  {"fieldname":"channel_owner_reference","fieldtype":"Data","label":"Channel Owner Reference"},
+  {"fieldname":"route_reference","fieldtype":"Data","label":"Route Reference"},
+  {"default":"0","fieldname":"approved_for_redirection","fieldtype":"Check","label":"Approved for Customer Redirection"},
+  {"fieldname":"public_contact_information","fieldtype":"Small Text","label":"Approved Public Contact Information"},
+  {"fieldname":"verification_notes","fieldtype":"Text Editor","label":"Verification Notes"}
+ ],
+ "module":"Customer Access","name":"Access Point",
+ "permissions":[
+  {"role":"CFG Commercial User","read":1,"write":1,"create":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"CFG Commercial Manager","read":1,"write":1,"create":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"CFG Commercial Viewer","read":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"CFG Platform Administrator","read":1,"write":1,"create":1,"delete":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"email":1,"export":1,"print":1,"report":1,"share":1}
+ ],"sort_field":"modified","sort_order":"DESC","states":[],"track_changes":1
+}
