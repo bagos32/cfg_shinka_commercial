@@ -5,26 +5,10 @@ from cfg_shinka_commercial.platform_administration.geospatial import apply_bound
 
 
 class FieldObservation(Document):
-    def before_validate(self):
-        if self.cfg_place:
-            place = frappe.get_doc("CFG Place", self.cfg_place)
-            self.territory = self.territory or place.territory
-            self.location = self.location or place.location
-            self.location_outlet = self.location_outlet or place.place_name
-            self.customer = self.customer or place.customer
-            if self.territory == place.territory:
-                self.territory_geography = place.territory_geography
-                if place.territory_geography:
-                    self.flags.preferred_territory_geography = frappe.get_doc(
-                        "CFG Territory Geography", place.territory_geography
-                    )
-
     def validate(self):
+        preferred_geography = self._apply_place()
         if self.location:
-            apply_boundary_validation(
-                self,
-                preferred_geography=self.flags.get("preferred_territory_geography"),
-            )
+            apply_boundary_validation(self, preferred_geography=preferred_geography)
         else:
             self.territory_geography = None
             self.boundary_validation_status = "Not Checked"
@@ -34,3 +18,18 @@ class FieldObservation(Document):
             frappe.throw("Exact Location is required before reviewing a Field Observation.")
         if self.status == "Reviewed" and self.boundary_validation_status == "Outside Territory" and not self.outside_territory_reason:
             frappe.throw("Outside Territory Reason is required before reviewing this observation.")
+
+    def _apply_place(self):
+        if self.cfg_place:
+            place = frappe.get_doc("CFG Place", self.cfg_place)
+            self.territory = self.territory or place.territory
+            self.location = self.location or place.location
+            self.location_outlet = self.location_outlet or place.place_name
+            self.customer = self.customer or place.customer
+            if self.territory == place.territory:
+                self.territory_geography = place.territory_geography
+                if place.territory_geography:
+                    return frappe.get_doc(
+                        "CFG Territory Geography", place.territory_geography
+                    )
+        return None

@@ -3,7 +3,11 @@ import json
 import frappe
 from frappe.utils import nowdate
 
-from cfg_shinka_commercial.platform_administration.geospatial import parse_geolocation
+from cfg_shinka_commercial.platform_administration.geospatial import (
+    active_territory_geography,
+    parse_geolocation,
+    point_in_boundary,
+)
 
 
 def _feature(geometry_type, coordinates):
@@ -36,7 +40,17 @@ def run():
             frappe.throw("Point coordinates were not derived correctly.")
         report["checks"].append("Reusable Place validates a point inside the active territory boundary")
 
+        stored_place = frappe.get_doc("CFG Place", place.name)
+        stored_geography = active_territory_geography(territory)
+        if stored_place.territory_geography != geography.name:
+            frappe.throw("CFG Place did not persist its governed Territory Geography link.")
+        if not stored_geography or stored_geography.name != geography.name:
+            frappe.throw("The newly inserted active territory boundary cannot be resolved in this transaction.")
+        report["checks"].append("Governed boundary links persist and resolve within the transaction")
+
         company = frappe.db.get_value("Company", {}, "name")
+        if not company:
+            frappe.throw("Verification prerequisite missing: at least one Company is required.")
         observation = _insert(report, {
             "doctype": "Field Observation", "observation_date": nowdate(), "status": "Reviewed",
             "observer": "Administrator", "company": company, "cfg_place": place.name,
@@ -61,13 +75,20 @@ def run():
         if outside.boundary_validation_status != "Outside Territory" or not outside.territory_review_required:
             frappe.throw("Outside-territory points must be retained and flagged for review.")
         report["checks"].append("Outside-territory locations warn and require review without being blocked")
+
+        if point_in_boundary([101.0, 3.5], geography.boundary_geometry) != "On Boundary":
+            frappe.throw("Boundary-edge classification is incorrect.")
+        if point_in_boundary([101.5, 4.5], geography.boundary_geometry) != "Outside Territory":
+            frappe.throw("Outside-boundary classification is incorrect.")
+        report["checks"].append("Point-in-polygon classification covers inside, edge and outside points")
     except Exception:
         frappe.db.rollback(save_point=savepoint)
         raise
     frappe.db.rollback(save_point=savepoint)
-    for doctype, name in report["temporary_records"].items():
-        if frappe.db.exists(doctype, name):
-            frappe.throw(f"Rollback failed for {doctype} {name}.")
+    for doctype, names in report["temporary_records"].items():
+        for name in names:
+            if frappe.db.exists(doctype, name):
+                frappe.throw(f"Rollback failed for {doctype} {name}.")
     report["checks"].append("All GEO-1 temporary records were rolled back")
     report["status"] = "PASSED"
     report["summary"] = f"{len(report['checks'])} GEO-1 checks passed; test records rolled back."
@@ -84,6 +105,22 @@ def _verify_metadata(report):
         frappe.throw("CFG Shinka Commercial Workspace is missing GEO-1 links.")
     report["checks"].append("GEO-1 DocTypes and Workspace links are installed")
 
+    required_fields = {
+        "CFG Territory Geography": {"territory", "boundary_geometry", "status"},
+        "CFG Place": {"territory", "location", "territory_geography", "boundary_validation_status"},
+        "Field Observation": {"cfg_place", "location", "territory_geography", "boundary_validation_status"},
+    }
+    for doctype, expected in required_fields.items():
+        installed = set(frappe.get_all("DocField", filters={"parent": doctype}, pluck="fieldname"))
+        if expected - installed:
+            frappe.throw(f"{doctype} is missing GEO-1 fields: {', '.join(sorted(expected - installed))}")
+    if not frappe.db.exists(
+        "DocPerm",
+        {"parent": "CFG Territory Geography", "role": "CFG Market Intelligence Manager", "read": 1, "write": 1, "create": 1},
+    ):
+        frappe.throw("CFG Territory Geography permissions are incomplete.")
+    report["checks"].append("GEO-1 fields and operational permissions are installed")
+
 
 def _find_territory():
     active = set(frappe.get_all("CFG Territory Geography", filters={"status": "Active"}, pluck="territory"))
@@ -95,5 +132,5 @@ def _find_territory():
 
 def _insert(report, values):
     document = frappe.get_doc(values).insert(ignore_permissions=True)
-    report["temporary_records"][document.doctype] = document.name
+    report["temporary_records"].setdefault(document.doctype, []).append(document.name)
     return document
