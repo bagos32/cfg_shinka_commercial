@@ -70,6 +70,12 @@ def apply_boundary_validation(document, territory_field="territory", location_fi
 
     point = extract_single_point(location, document.meta.get_label(location_field))
     geography = active_territory_geography(territory)
+    if not geography and document.get("territory_geography"):
+        candidate = frappe.get_doc(
+            "CFG Territory Geography", document.get("territory_geography")
+        )
+        if candidate.territory == territory and candidate.status == "Active":
+            geography = candidate
     if not geography:
         _set_boundary_result(document, None, "Boundary Unavailable", True)
         return "Boundary Unavailable"

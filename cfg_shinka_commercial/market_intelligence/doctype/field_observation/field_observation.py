@@ -12,6 +12,8 @@ class FieldObservation(Document):
             self.location = self.location or place.location
             self.location_outlet = self.location_outlet or place.place_name
             self.customer = self.customer or place.customer
+            if self.territory == place.territory:
+                self.territory_geography = place.territory_geography
 
     def validate(self):
         if self.location:
