@@ -61,7 +61,12 @@ def active_territory_geography(territory):
     return frappe.get_doc("CFG Territory Geography", name) if name else None
 
 
-def apply_boundary_validation(document, territory_field="territory", location_field="location"):
+def apply_boundary_validation(
+    document,
+    territory_field="territory",
+    location_field="location",
+    preferred_geography=None,
+):
     territory = document.get(territory_field)
     location = document.get(location_field)
     if not territory or not location:
@@ -69,7 +74,15 @@ def apply_boundary_validation(document, territory_field="territory", location_fi
         return "Not Checked"
 
     point = extract_single_point(location, document.meta.get_label(location_field))
-    geography = active_territory_geography(territory)
+    geography = None
+    if (
+        preferred_geography
+        and preferred_geography.territory == territory
+        and preferred_geography.status == "Active"
+    ):
+        geography = preferred_geography
+    if not geography:
+        geography = active_territory_geography(territory)
     if not geography and document.get("territory_geography"):
         candidate = frappe.get_doc(
             "CFG Territory Geography", document.get("territory_geography")

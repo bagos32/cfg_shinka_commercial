@@ -14,10 +14,17 @@ class FieldObservation(Document):
             self.customer = self.customer or place.customer
             if self.territory == place.territory:
                 self.territory_geography = place.territory_geography
+                if place.territory_geography:
+                    self.flags.preferred_territory_geography = frappe.get_doc(
+                        "CFG Territory Geography", place.territory_geography
+                    )
 
     def validate(self):
         if self.location:
-            apply_boundary_validation(self)
+            apply_boundary_validation(
+                self,
+                preferred_geography=self.flags.get("preferred_territory_geography"),
+            )
         else:
             self.territory_geography = None
             self.boundary_validation_status = "Not Checked"
