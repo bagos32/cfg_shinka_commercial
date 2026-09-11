@@ -1,0 +1,31 @@
+{
+ "actions": [], "allow_rename": 1, "autoname": "CTG-.YYYY.-.#####", "doctype": "DocType", "engine": "InnoDB",
+ "field_order": ["identity_section","territory","boundary_name","status","boundary_version","boundary_section","boundary_geometry","governance_section","effective_from","effective_to","boundary_source","source_reference","confidence_level","validated_by","validation_date","supersedes_boundary","notes"],
+ "fields": [
+  {"fieldname":"identity_section","fieldtype":"Section Break","label":"Territory Boundary Identity"},
+  {"fieldname":"territory","fieldtype":"Link","label":"ERPNext Territory","options":"Territory","reqd":1,"in_list_view":1},
+  {"fieldname":"boundary_name","fieldtype":"Data","label":"Boundary Name","reqd":1,"in_list_view":1},
+  {"default":"Draft","fieldname":"status","fieldtype":"Select","label":"Status","options":"Draft\nUnder Review\nActive\nSuperseded\nRejected","reqd":1,"in_list_view":1},
+  {"default":"1","fieldname":"boundary_version","fieldtype":"Int","label":"Boundary Version","reqd":1},
+  {"fieldname":"boundary_section","fieldtype":"Section Break","label":"Governed Boundary"},
+  {"fieldname":"boundary_geometry","fieldtype":"Geolocation","label":"Boundary Geometry","reqd":1,"description":"Draw one or more polygons. Points and lines are not accepted as territory boundaries."},
+  {"fieldname":"governance_section","fieldtype":"Section Break","label":"Source and Governance"},
+  {"fieldname":"effective_from","fieldtype":"Date","label":"Effective From"},
+  {"fieldname":"effective_to","fieldtype":"Date","label":"Effective To"},
+  {"fieldname":"boundary_source","fieldtype":"Data","label":"Boundary Source","description":"Authority, survey, operational agreement, or dataset used for this boundary."},
+  {"fieldname":"source_reference","fieldtype":"Data","label":"Source Reference"},
+  {"fieldname":"confidence_level","fieldtype":"Select","label":"Confidence Level","options":"Unverified\nApproximate\nOperationally Confirmed\nAuthoritative"},
+  {"fieldname":"validated_by","fieldtype":"Link","label":"Validated By","options":"User","read_only":1},
+  {"fieldname":"validation_date","fieldtype":"Date","label":"Validation Date","read_only":1},
+  {"fieldname":"supersedes_boundary","fieldtype":"Link","label":"Supersedes Boundary","options":"CFG Territory Geography"},
+  {"fieldname":"notes","fieldtype":"Text Editor","label":"Notes"}
+ ],
+ "module":"Platform Administration","name":"CFG Territory Geography",
+ "permissions":[
+  {"role":"CFG Market Intelligence User","read":1},
+  {"role":"CFG Market Intelligence Manager","read":1,"write":1,"create":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"CFG Market Intelligence Viewer","read":1},
+  {"role":"CFG Platform Administrator","read":1,"write":1,"create":1,"delete":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"email":1,"export":1,"print":1,"report":1,"share":1}
+ ], "sort_field":"modified","sort_order":"DESC","states":[],"track_changes":1
+}

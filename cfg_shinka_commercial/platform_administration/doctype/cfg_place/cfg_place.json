@@ -1,0 +1,42 @@
+{
+ "actions":[],"allow_rename":1,"autoname":"CPL-.YYYY.-.#####","doctype":"DocType","engine":"InnoDB",
+ "field_order":["identity_section","place_name","place_type","status","territory","customer","lead","address_reference","map_section","location","latitude","longitude","location_source","gps_accuracy_m","validation_section","territory_geography","boundary_validation_status","boundary_validation_date","territory_review_required","outside_territory_reason","governance_section","location_verified","verified_by","verified_on","public_location","confidentiality","notes"],
+ "fields":[
+  {"fieldname":"identity_section","fieldtype":"Section Break","label":"Reusable Place Identity"},
+  {"fieldname":"place_name","fieldtype":"Data","label":"Place Name","reqd":1,"in_list_view":1},
+  {"fieldname":"place_type","fieldtype":"Select","label":"Place Type","options":"Outlet\nCustomer Site\nDistributor\nWarehouse\nRoute Point\nMarket\nInstitution\nOther","reqd":1,"in_list_view":1},
+  {"default":"Active","fieldname":"status","fieldtype":"Select","label":"Status","options":"Draft\nActive\nInactive\nArchived","reqd":1,"in_list_view":1},
+  {"fieldname":"territory","fieldtype":"Link","label":"Territory","options":"Territory","reqd":1,"in_list_view":1},
+  {"fieldname":"customer","fieldtype":"Link","label":"Customer","options":"Customer"},
+  {"fieldname":"lead","fieldtype":"Link","label":"Lead","options":"Lead"},
+  {"fieldname":"address_reference","fieldtype":"Link","label":"Address","options":"Address"},
+  {"fieldname":"map_section","fieldtype":"Section Break","label":"Exact Location"},
+  {"fieldname":"location","fieldtype":"Geolocation","label":"Exact Location","reqd":1,"description":"Store one point only. Confirm that precise location collection is appropriate before saving."},
+  {"fieldname":"latitude","fieldtype":"Float","label":"Latitude","precision":"7","read_only":1},
+  {"fieldname":"longitude","fieldtype":"Float","label":"Longitude","precision":"7","read_only":1},
+  {"fieldname":"location_source","fieldtype":"Select","label":"Location Source","options":"Map Selection\nDevice GPS\nAddress Reference\nImported\nOperational Estimate\nOther"},
+  {"fieldname":"gps_accuracy_m","fieldtype":"Float","label":"GPS Accuracy (m)","non_negative":1},
+  {"fieldname":"validation_section","fieldtype":"Section Break","label":"Territory Validation"},
+  {"fieldname":"territory_geography","fieldtype":"Link","label":"Territory Geography","options":"CFG Territory Geography","read_only":1},
+  {"fieldname":"boundary_validation_status","fieldtype":"Select","label":"Boundary Validation","options":"Not Checked\nBoundary Unavailable\nInside Territory\nOn Boundary\nOutside Territory","read_only":1},
+  {"fieldname":"boundary_validation_date","fieldtype":"Datetime","label":"Validation Date","read_only":1},
+  {"default":"0","fieldname":"territory_review_required","fieldtype":"Check","label":"Territory Review Required","read_only":1},
+  {"fieldname":"outside_territory_reason","fieldtype":"Small Text","label":"Outside Territory Reason","depends_on":"eval:doc.territory_review_required"},
+  {"fieldname":"governance_section","fieldtype":"Section Break","label":"Verification and Privacy"},
+  {"default":"0","fieldname":"location_verified","fieldtype":"Check","label":"Location Verified"},
+  {"fieldname":"verified_by","fieldtype":"Link","label":"Verified By","options":"User","read_only":1},
+  {"fieldname":"verified_on","fieldtype":"Datetime","label":"Verified On","read_only":1},
+  {"default":"0","fieldname":"public_location","fieldtype":"Check","label":"Approved for Public Use"},
+  {"default":"Internal","fieldname":"confidentiality","fieldtype":"Select","label":"Confidentiality","options":"Internal\nRestricted\nPublic","reqd":1},
+  {"fieldname":"notes","fieldtype":"Text Editor","label":"Notes"}
+ ],
+ "module":"Platform Administration","name":"CFG Place",
+ "permissions":[
+  {"role":"CFG Market Intelligence User","read":1,"write":1,"create":1},
+  {"role":"CFG Market Intelligence Manager","read":1,"write":1,"create":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"CFG Market Intelligence Viewer","read":1},
+  {"role":"CFG Commercial Manager","read":1},
+  {"role":"CFG Platform Administrator","read":1,"write":1,"create":1,"delete":1,"email":1,"export":1,"print":1,"report":1,"share":1},
+  {"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"email":1,"export":1,"print":1,"report":1,"share":1}
+ ],"sort_field":"modified","sort_order":"DESC","states":[],"track_changes":1
+}
