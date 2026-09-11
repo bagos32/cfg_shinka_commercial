@@ -14,5 +14,7 @@ class TestCustomerRedirection(FrappeTestCase):
         redirection = frappe.new_doc("Customer Redirection")
         redirection.status = "Closed"
         redirection.outcome = "Pending"
+        redirection.redirection_date = "2026-09-01"
+        redirection.alternative_options_provided = 1
         with self.assertRaises(frappe.ValidationError):
             redirection.validate_outcome()

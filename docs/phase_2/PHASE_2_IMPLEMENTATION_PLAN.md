@@ -56,6 +56,17 @@ bench --site site1.local execute \
 
 The runner checks installed metadata and creates a temporary Case → Opportunity → Market Vacuum → Access Point → Channel Resilience Assessment → Customer Enquiry → Customer Redirection chain. It rolls the entire transaction back on both success and failure. A successful result reports `PASSED` and confirms that no temporary records remain.
 
+## Phase 2A hardening controls
+
+- Market Vacuum response execution requires a documented channel response strategy.
+- Pilot Active requires a linked Pilot that is approved for launch or active.
+- Amber and Red OEM conflicts require an active authorizing Gate, Management or Risk Decision belonging to the same Case and Opportunity.
+- Access Points inherit and validate Company, Territory, Item and Opportunity context from their Market Vacuum.
+- Only active Access Points with verified usable availability can be approved for customer redirection.
+- Customer Redirection validates its Access Point and Market Vacuum context, follow-up dates and measured closure evidence.
+- Phase 2 forms are grouped into operational sections and provide filtered links and guided creation actions.
+- Automated verification includes operational permission metadata and the negative OEM authorization control.
+
 ## Deferred pending operating evidence
 
 - automatic alert thresholds;

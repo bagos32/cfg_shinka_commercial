@@ -50,6 +50,22 @@ def _verify_metadata(report):
 
     report["checks"].append("Phase 2 DocTypes and modules are installed")
 
+    expected_roles = {
+        "Market Vacuum": "CFG Commercial User",
+        "Channel Resilience Assessment": "CFG Commercial User",
+        "Access Point": "CFG Commercial User",
+        "Customer Redirection": "CFG Market Intelligence User",
+    }
+    for doctype, role in expected_roles.items():
+        permission = frappe.db.exists(
+            "DocPerm",
+            {"parent": doctype, "role": role, "read": 1, "write": 1, "create": 1},
+        )
+        if not permission:
+            frappe.throw(f"{doctype} is missing operational permission for {role}.")
+
+    report["checks"].append("Phase 2 operational role permissions are installed")
+
 
 def _load_context(report):
     company = frappe.db.get_value("Company", {}, "name")
@@ -223,6 +239,7 @@ def _create_lifecycle(context, report):
             "alternative_options_provided": 1,
             "message_summary": "Customer was given a verified active buying point.",
             "outcome": "Customer Reached",
+            "outcome_evidence": "Automated verification confirmed that the customer was reached.",
             "handled_by": context["owner"],
         },
     )
@@ -254,6 +271,17 @@ def _verify_results(records, report):
 
     report["checks"].append("Channel resilience percentage, gap and rating are correct")
     report["checks"].append("Customer redirection response time is correct")
+
+    blocked_vacuum = frappe.new_doc("Market Vacuum")
+    blocked_vacuum.status = "Response Designed"
+    blocked_vacuum.oem_conflict_classification = "Red"
+    blocked_vacuum.oem_review_summary = "A material OEM conflict requires governance authorization."
+    try:
+        blocked_vacuum.validate_oem_control()
+    except frappe.ValidationError:
+        report["checks"].append("Red OEM conflict is blocked without governance authorization")
+    else:
+        frappe.throw("Red OEM conflict was not blocked without governance authorization.")
 
 
 def _verify_rollback(report):

@@ -81,8 +81,15 @@ class MarketVacuum(Document):
         if self.status in {"Qualified", "Response Designed", "Pilot Active", "Recovered"} and not self.commercial_opportunity:
             frappe.throw("Commercial Opportunity is required when a Market Vacuum is qualified for response.")
 
+        if self.status in {"Response Designed", "Pilot Active", "Recovered"} and not self.response_strategy:
+            frappe.throw("Channel Response Strategy is required before response execution.")
+
         if self.status == "Pilot Active" and not self.pilot:
             frappe.throw("Pilot is required when status is Pilot Active.")
+        if self.status == "Pilot Active" and self.pilot:
+            pilot_status = frappe.db.get_value("Pilot", self.pilot, "status")
+            if pilot_status not in {"Approved for Launch", "Active"}:
+                frappe.throw("Pilot must be approved for launch or active before the Market Vacuum is Pilot Active.")
 
         if self.status == "Recovered" and not self.recovery_summary:
             frappe.throw("Recovery Summary is required when status is Recovered.")
@@ -90,7 +97,22 @@ class MarketVacuum(Document):
     def validate_oem_control(self):
         if self.oem_conflict_classification in {"Amber", "Red"} and not self.oem_review_summary:
             frappe.throw("OEM Review Summary is required for Amber or Red classifications.")
-        if self.oem_conflict_classification == "Red" and self.status in {
-            "Response Designed", "Pilot Active", "Recovered"
-        }:
-            frappe.throw("A Red OEM conflict cannot progress without an authorized governance decision.")
+
+        controlled_statuses = {"Response Designed", "Pilot Active", "Recovered"}
+        if self.oem_conflict_classification not in {"Amber", "Red"} or self.status not in controlled_statuses:
+            return
+
+        if not self.oem_governance_decision:
+            frappe.throw(
+                "An active OEM Governance Decision is required before an Amber or Red conflict can proceed."
+            )
+
+        decision = frappe.get_doc("Decision Record", self.oem_governance_decision)
+        if decision.decision_type not in {"Gate Decision", "Management Decision", "Risk Decision"}:
+            frappe.throw("OEM Governance Decision must be a gate, management or risk decision.")
+        if decision.status != "Active" or decision.decision not in {"Proceed", "Approve for Pilot Preparation"}:
+            frappe.throw("OEM Governance Decision must be active and authorize the response to proceed.")
+        if decision.commercial_development_case != self.commercial_development_case:
+            frappe.throw("OEM Governance Decision must belong to the selected Commercial Development Case.")
+        if self.commercial_opportunity and decision.commercial_opportunity != self.commercial_opportunity:
+            frappe.throw("OEM Governance Decision must belong to the selected Commercial Opportunity.")
