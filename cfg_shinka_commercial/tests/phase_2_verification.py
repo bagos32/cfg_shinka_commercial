@@ -66,6 +66,29 @@ def _verify_metadata(report):
 
     report["checks"].append("Phase 2 operational role permissions are installed")
 
+    expected_workspace_links = {
+        "Protect Customer Access",
+        "Market Vacuum",
+        "Access Point",
+        "Customer Redirection",
+        "Channel Resilience Assessment",
+    }
+    installed_workspace_links = set(
+        frappe.get_all(
+            "Workspace Link",
+            filters={"parent": "CFG Shinka Commercial"},
+            pluck="label",
+        )
+    )
+    missing_workspace_links = expected_workspace_links - installed_workspace_links
+    if missing_workspace_links:
+        frappe.throw(
+            "CFG Shinka Commercial Workspace is missing Phase 2 links: "
+            + ", ".join(sorted(missing_workspace_links))
+        )
+
+    report["checks"].append("Phase 2 Workspace card and links are installed")
+
 
 def _load_context(report):
     company = frappe.db.get_value("Company", {}, "name")
