@@ -45,6 +45,17 @@ Market Vacuum is a specialised condition record attached to a Commercial Develop
 9. Measure access, recovery and commercial results through the Pilot.
 10. Use G4 and Scale Decision for scale, extend, redesign, hold or stop.
 
+## Automated verification
+
+After migration, run the rollback-safe integration check on the development site:
+
+```bash
+bench --site site1.local execute \
+  cfg_shinka_commercial.tests.phase_2_verification.run
+```
+
+The runner checks installed metadata and creates a temporary Case → Opportunity → Market Vacuum → Access Point → Channel Resilience Assessment → Customer Enquiry → Customer Redirection chain. It rolls the entire transaction back on both success and failure. A successful result reports `PASSED` and confirms that no temporary records remain.
+
 ## Deferred pending operating evidence
 
 - automatic alert thresholds;
