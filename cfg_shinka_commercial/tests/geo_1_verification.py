@@ -3,6 +3,8 @@ import json
 import frappe
 from frappe.utils import nowdate
 
+from cfg_shinka_commercial.platform_administration.geospatial import parse_geolocation
+
 
 def _feature(geometry_type, coordinates):
     return json.dumps({"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {}, "geometry": {"type": geometry_type, "coordinates": coordinates}}]})
@@ -40,8 +42,15 @@ def run():
             "observer": "Administrator", "company": company, "cfg_place": place.name,
             "observation_type": "Availability", "observed_condition": "GEO-1 temporary verification observation.",
         })
-        if observation.location != place.location or observation.boundary_validation_status != "Inside Territory":
-            frappe.throw("Field Observation did not inherit and validate its reusable place location.")
+        observation_geometry = parse_geolocation(observation.location, "Field Observation Location")
+        place_geometry = parse_geolocation(place.location, "CFG Place Location")
+        if observation_geometry != place_geometry:
+            frappe.throw("Field Observation did not inherit its reusable place geometry.")
+        if observation.boundary_validation_status != "Inside Territory":
+            frappe.throw(
+                "Field Observation inherited the location but boundary validation returned "
+                f"{observation.boundary_validation_status}."
+            )
         report["checks"].append("Field Observation reuses and validates governed place geometry")
 
         outside = _insert(report, {
