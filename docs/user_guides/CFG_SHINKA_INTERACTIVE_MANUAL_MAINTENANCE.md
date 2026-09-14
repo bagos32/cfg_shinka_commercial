@@ -33,6 +33,10 @@ For every release that changes user workflow:
 
 The content should remain aligned with the CFG Shinka Merchandise master guideline, the Universal Commercial Opportunity Governance add-on, the Market Vacuum / Customer Access / Channel Resilience add-on, and the single-app multi-module engineering baseline.
 
+## Current content baseline
+
+Rev.02 provides operational learning content for record selection, the complete evidence-to-scale workflow, all Market Intelligence records, Commercial Core, G0–G4 governance, assessment and risk, pilot preparation and execution, Market Vacuum, GEO-1 geography, Customer Access, Channel Resilience, feedback and learning, user responsibilities, rollout, and release control. Future releases should extend these topics in place rather than creating a second manual source.
+
 ## Deployment
 
 After installing or updating the app on a Frappe v15 site, run the normal site migration and asset build for that environment, then clear the website/Desk cache. No ERPNext core file is modified.
