@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"6VkQP2BdZE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Snapshot</b></span>\",\"col\":12}},{\"id\":\"ohlDrAYhUB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Flow</b></span>\",\"col\":12}},{\"id\":\"kDgdcKMA_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"b2Q4fEo9lS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Enquiry\",\"col\":3}},{\"id\":\"Gl1JBty1xK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Evidence Record\",\"col\":3}},{\"id\":\"e6HpPVvxYA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commercial Development Case\",\"col\":3}},{\"id\":\"4r5yooCahT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot\",\"col\":3}},{\"id\":\"m2NS_rxKuk\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BeStGtMQqm\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Commercial Operating System</b></span>\",\"col\":12}},{\"id\":\"H11WVzS5yX\",\"type\":\"card\",\"data\":{\"card_name\":\"Understand\",\"col\":4}},{\"id\":\"_iy1hio_3p\",\"type\":\"card\",\"data\":{\"card_name\":\"Develop\",\"col\":4}},{\"id\":\"mvPhase2\",\"type\":\"card\",\"data\":{\"card_name\":\"Protect Customer Access\",\"col\":4}},{\"id\":\"geoFoundation\",\"type\":\"card\",\"data\":{\"card_name\":\"Geospatial Foundation\",\"col\":4}},{\"id\":\"SR60DXqzWk\",\"type\":\"card\",\"data\":{\"card_name\":\"Govern\",\"col\":4}},{\"id\":\"OHEaEYf2O3\",\"type\":\"card\",\"data\":{\"card_name\":\"Pilot\",\"col\":4}},{\"id\":\"86wN1zQz9I\",\"type\":\"card\",\"data\":{\"card_name\":\"User Guide & Learning\",\"col\":4}}]",
+ "content": "[{\"id\":\"6VkQP2BdZE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Snapshot</b></span>\",\"col\":12}},{\"id\":\"ohlDrAYhUB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Flow</b></span>\",\"col\":12}},{\"id\":\"kDgdcKMA_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"b2Q4fEo9lS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Enquiry\",\"col\":3}},{\"id\":\"Gl1JBty1xK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Evidence Record\",\"col\":3}},{\"id\":\"e6HpPVvxYA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commercial Development Case\",\"col\":3}},{\"id\":\"4r5yooCahT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot\",\"col\":3}},{\"id\":\"m2NS_rxKuk\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BeStGtMQqm\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Commercial Operating System</b></span>\",\"col\":12}},{\"id\":\"H11WVzS5yX\",\"type\":\"card\",\"data\":{\"card_name\":\"Understand\",\"col\":4}},{\"id\":\"_iy1hio_3p\",\"type\":\"card\",\"data\":{\"card_name\":\"Develop\",\"col\":4}},{\"id\":\"mvPhase2\",\"type\":\"card\",\"data\":{\"card_name\":\"Protect Customer Access\",\"col\":4}},{\"id\":\"geoFoundation\",\"type\":\"card\",\"data\":{\"card_name\":\"Geospatial Foundation\",\"col\":4}},{\"id\":\"SR60DXqzWk\",\"type\":\"card\",\"data\":{\"card_name\":\"Govern\",\"col\":4}},{\"id\":\"OHEaEYf2O3\",\"type\":\"card\",\"data\":{\"card_name\":\"Pilot\",\"col\":4}},{\"id\":\"86wN1zQz9I\",\"type\":\"card\",\"data\":{\"card_name\":\"User Manual & Learning\",\"col\":4}}]",
  "creation": "2026-09-02 01:26:49.593459",
  "custom_blocks": [],
  "docstatus": 0,
@@ -309,7 +309,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "User Guide & Learning",
+   "label": "User Manual & Learning",
    "link_count": 1,
    "link_type": "DocType",
    "onboard": 0,
@@ -318,7 +318,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "CFG Shinka Commercial Guideline",
+   "label": "Interactive User Manual",
    "link_count": 0,
    "link_to": "cfg-shinka-commercia",
    "link_type": "Page",
