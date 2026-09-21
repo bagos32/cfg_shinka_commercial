@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"6VkQP2BdZE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Snapshot</b></span>\",\"col\":12}},{\"id\":\"ohlDrAYhUB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Flow</b></span>\",\"col\":12}},{\"id\":\"kDgdcKMA_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"b2Q4fEo9lS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Enquiry\",\"col\":3}},{\"id\":\"Gl1JBty1xK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Evidence Record\",\"col\":3}},{\"id\":\"e6HpPVvxYA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commercial Development Case\",\"col\":3}},{\"id\":\"4r5yooCahT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot\",\"col\":3}},{\"id\":\"m2NS_rxKuk\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BeStGtMQqm\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Commercial Operating System</b></span>\",\"col\":12}},{\"id\":\"H11WVzS5yX\",\"type\":\"card\",\"data\":{\"card_name\":\"Understand\",\"col\":4}},{\"id\":\"_iy1hio_3p\",\"type\":\"card\",\"data\":{\"card_name\":\"Develop\",\"col\":4}},{\"id\":\"mvPhase2\",\"type\":\"card\",\"data\":{\"card_name\":\"Protect Customer Access\",\"col\":4}},{\"id\":\"geoFoundation\",\"type\":\"card\",\"data\":{\"card_name\":\"Geospatial Foundation\",\"col\":4}},{\"id\":\"SR60DXqzWk\",\"type\":\"card\",\"data\":{\"card_name\":\"Govern\",\"col\":4}},{\"id\":\"OHEaEYf2O3\",\"type\":\"card\",\"data\":{\"card_name\":\"Pilot\",\"col\":4}},{\"id\":\"86wN1zQz9I\",\"type\":\"card\",\"data\":{\"card_name\":\"User Manual & Learning\",\"col\":4}}]",
+ "content": "[{\"id\":\"6VkQP2BdZE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Snapshot</b></span>\",\"col\":12}},{\"id\":\"ohlDrAYhUB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Operational Flow</b></span>\",\"col\":12}},{\"id\":\"kDgdcKMA_6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Actions</b></span>\",\"col\":12}},{\"id\":\"b2Q4fEo9lS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Enquiry\",\"col\":3}},{\"id\":\"mpsQuick\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Market Price Survey\",\"col\":3}},{\"id\":\"Gl1JBty1xK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Evidence Record\",\"col\":3}},{\"id\":\"e6HpPVvxYA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Commercial Development Case\",\"col\":3}},{\"id\":\"4r5yooCahT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot\",\"col\":3}},{\"id\":\"m2NS_rxKuk\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BeStGtMQqm\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Commercial Operating System</b></span>\",\"col\":12}},{\"id\":\"H11WVzS5yX\",\"type\":\"card\",\"data\":{\"card_name\":\"Understand\",\"col\":4}},{\"id\":\"_iy1hio_3p\",\"type\":\"card\",\"data\":{\"card_name\":\"Develop\",\"col\":4}},{\"id\":\"mvPhase2\",\"type\":\"card\",\"data\":{\"card_name\":\"Protect Customer Access\",\"col\":4}},{\"id\":\"geoFoundation\",\"type\":\"card\",\"data\":{\"card_name\":\"Geospatial Foundation\",\"col\":4}},{\"id\":\"SR60DXqzWk\",\"type\":\"card\",\"data\":{\"card_name\":\"Govern\",\"col\":4}},{\"id\":\"OHEaEYf2O3\",\"type\":\"card\",\"data\":{\"card_name\":\"Pilot\",\"col\":4}},{\"id\":\"86wN1zQz9I\",\"type\":\"card\",\"data\":{\"card_name\":\"User Manual & Learning\",\"col\":4}}]",
  "creation": "2026-09-02 01:26:49.593459",
  "custom_blocks": [],
  "docstatus": 0,
@@ -37,6 +37,16 @@
    "label": "Field Observation",
    "link_count": 0,
    "link_to": "Field Observation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Market Price Survey",
+   "link_count": 0,
+   "link_to": "Market Price Survey",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -326,7 +336,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-09-11 22:30:00.000000",
+ "modified": "2026-09-21 16:00:00.000000",
  "modified_by": "Administrator",
  "module": "Commercial Core",
  "name": "CFG Shinka Commercial",
@@ -396,6 +406,12 @@
    "doc_view": "New",
    "label": "Customer Enquiry",
    "link_to": "Customer Enquiry",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "New",
+   "label": "Market Price Survey",
+   "link_to": "Market Price Survey",
    "type": "DocType"
   },
   {

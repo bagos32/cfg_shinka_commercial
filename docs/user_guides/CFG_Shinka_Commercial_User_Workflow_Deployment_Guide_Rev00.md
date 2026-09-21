@@ -228,6 +228,7 @@ Use the record that best represents what has actually happened.
 |---|---|
 | A customer asks for something, reports a need or expresses interest | Customer Enquiry |
 | A salesperson or field team observes something relevant in the market | Field Observation |
+| A merchandise visit records prices for several own, OEM or competitor products | Market Price Survey |
 | A competitor action or market behaviour is observed | Competitor Observation |
 | A repeatable demand pattern or demand indication appears | Demand Signal |
 | A distributor, dealer or channel issue/opportunity is observed | Channel Observation |
@@ -382,6 +383,14 @@ Examples:
 - channel change.
 
 Separate observed facts from assumptions about competitor intent.
+
+---
+
+## 6.3A Market Price Survey
+
+Use one Market Price Survey for one outlet visit and add one row for each own, OEM, competitor or other product observed. Prefer a governed CFG Place so the outlet, exact location and Territory remain consistent.
+
+Record the pack basis, regular and promotional price, availability, shelf facings and supporting image where permitted. The system calculates effective observed price, normalized unit price and factual difference from the entered CFG reference price. A survey does not create Evidence or a Development Case automatically; link material or recurring findings to an Evidence Record for controlled escalation.
 
 ---
 
@@ -1406,4 +1415,3 @@ Future functionality—including Market Vacuum, Customer Access, Channel Resilie
 The guiding principle is:
 
 > **The application should evolve from observed commercial reality, and the documentation should evolve together with the application.**
-
